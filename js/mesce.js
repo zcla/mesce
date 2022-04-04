@@ -4,7 +4,7 @@ let data = null;
 
 class BackendUtils {
 	static async getData() {
-		return await (await fetch('/data/data.json')).json();
+		return await (await fetch('data/data.json')).json();
 	}
 }
 
