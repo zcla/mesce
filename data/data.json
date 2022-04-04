@@ -48,7 +48,13 @@
             "nomeGuerra": "Eliane",
             "aniversario": "20/02",
             "comMandato": true,
-            "disponibilidade": [ "enfermos" ]
+            "disponibilidade": [ "enfermos" ],
+            "afastamento": [
+                {
+                    "inicio": "30/03/2022",
+                    "motivo": "saúde"
+                }
+            ]
         },
         "Fátima": {
             "nome": "Maria de Fátima da Silva Palmeira Ribeiro",
