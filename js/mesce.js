@@ -13,7 +13,7 @@ class DominioUtils {
 		// Nome de guerra está contido no nome. Ex.: <b>José Cláudio</b> Conceição de Aguiar
 		const pos = ministro.nome.indexOf(ministro.nomeGuerra);
 		if (pos > -1) {
-			return $('<div>')
+			return $('<span>')
 					.append(ministro.nome.substring(0, pos))
 					.append($('<b>')
 							.append(ministro.nomeGuerra))
@@ -21,7 +21,7 @@ class DominioUtils {
 		}
 	
 		// Nome de guerra está contido no nome, mas de forma dividido. Ex.: <b>Marta</b> Elvira Pereira de <b>Marsiaj</b>
-		const result = $('<div>');
+		const result = $('<span>');
 		let nome = ministro.nome;
 		const nomesGuerra = ministro.nomeGuerra.split(' ');
 		let conseguiu = true;
@@ -59,7 +59,7 @@ class DominioUtils {
 		}
 	
 		// Nome totalmente diferente
-		return $('<div>')
+		return $('<span>')
 				.append(ministro.nome)
 				.append(" (")
 				.append($('<b>')
@@ -129,12 +129,11 @@ class Menu {
 		for (const idMinistro of Object.keys(data.ministros)) {
 			const ministro = data.ministros[idMinistro];
 			let nomeFormatado = DominioUtils.ministro_nomeFormatado(ministro);
-			const nome = $('<div>');
+			const nome = $('<span>').append(nomeFormatado);
 			if (ministro.funcao) {
 				nome.append($('<span class="badge float-end funcao">')
 						.append(ministro.funcao));
 			}
-			nome.append(nomeFormatado);
 
 			tbody
 					.append($('<tr>')
