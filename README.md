@@ -1,2 +1,2 @@
 # mesce-frontend
-Frontend da aplicação para gerenciamento de grupos de Mesce
+Aplicação para gerenciamento de grupos de Mesce
