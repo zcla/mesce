@@ -19,6 +19,27 @@ thead tr th {
 	font-weight: bold;
 }
 
+/* Escala */
+
+table.escala .completa {
+	background-color: #00a65d;
+	color: #ffffff;
+}
+
+table.escala .faltando {
+	background-color: #ed1c24;
+	color: #ffffff;
+}
+
+table.escala .revezamento {
+	background-color: #0066b3;
+	color: #ffffff;
+}
+
+table.escala td.escalar {
+	text-align: right;
+}
+
 /* Ministros */
 
 table.ministros .funcao {

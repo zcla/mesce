@@ -91,6 +91,48 @@ class GuiUtils {
 }
 
 class Menu {
+	static async escala() {
+		GuiUtils.mensagensLimpa();
+		GuiUtils.conteudoLimpa();
+
+		const table = $('<table class="table table-sm table-bordered table-striped escala">');
+		GuiUtils.conteudoAdiciona(table);
+
+		const thead = $('<thead>');
+		thead.append(
+				$('<tr>')
+						.append($('<th>').append('Missa'))
+						.append($('<th>').append('Escalar'))
+						.append($('<th>').append('Ministros'))
+		);
+		table.append(thead);
+
+		const tbody = $('<tbody>');
+
+		for (const idItem of Object.keys(data.escala)) {
+			const item = data.escala[idItem];
+			let escalados = "";
+			for (const ministro of item.escalados) {
+				escalados += ministro + ", ";
+			}
+			escalados = escalados.substring(0, escalados.length - 2);
+
+			const situacao = item.escalados.length == item.escalar ? 'completa' : item.escalados.length > item.escalar ? 'revezamento' : 'faltando';
+			tbody
+					.append($('<tr>')
+							.append($('<td class="missa">')
+									.append(item.nome))
+							.append($('<td class="escalar">')
+									.append(item.escalar))
+							.append($('<td class="escalados">')
+									.append(escalados)
+									.append($('<span class="badge float-end ' + situacao + '">')
+											.append(situacao))));
+		}
+
+		table.append(tbody);
+	}
+
 	static ministros() {
 		GuiUtils.mensagensLimpa();
 		GuiUtils.conteudoLimpa();
@@ -153,5 +195,5 @@ class Menu {
 
 $(document).ready(async function() {
 	data = await BackendUtils.getData();
-	Menu.ministros();
+	Menu.escala();
 });
