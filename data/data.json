@@ -348,5 +348,187 @@
 			"escalar": 2,
 			"escalados": [ "Carlos", "Fátima", "Hélio", "Rubélio", "Vânia" ]
 		}
+	},
+    "eventos": {
+		"Adoração Santíssimo": {
+			"nome": "Adoração no Santuário do Santíssimo Sacramento",
+			"frequencia": "mensal",
+			"diaDoMes": 26,
+			"hora": "12h00",
+			"tipo": "santuario",
+			"icone": "&#128591;"
+		},
+		"Missa dom 10h00": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 0,
+			"hora": "10h00",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa dom 12h00": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 0,
+			"hora": "12h00",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa dom 18h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 0,
+			"hora": "18h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa dom 20h00": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 0,
+			"hora": "20h00",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa seg 08h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 1,
+			"hora": "08h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa seg 18h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 1,
+			"hora": "18h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa ter 08h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 2,
+			"hora": "08h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Bênção ter 09h00": {
+			"nome": "Bênção da saúde",
+			"frequencia": "semanal",
+			"diaDaSemana": 2,
+			"hora": "09h00",
+			"tipo": "bencao",
+			"icone": "&#128588;"
+		},
+		"Missa ter 18h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 2,
+			"hora": "18h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Bênção ter 19h00": {
+			"nome": "Bênção da saúde",
+			"frequencia": "semanal",
+			"diaDaSemana": 2,
+			"hora": "19h00",
+			"tipo": "bencao",
+			"icone": "&#128588;"
+		},
+		"Missa qua 08h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 3,
+			"hora": "08h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa qua 18h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 3,
+			"hora": "18h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa qui 08h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 4,
+			"hora": "08h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa qui 18h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 4,
+			"hora": "18h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Adoração qui 19h00": {
+			"nome": "Adoração",
+			"frequencia": "semanal",
+			"diaDaSemana": 4,
+			"hora": "19h00",
+			"tipo": "adoracao",
+			"icone": "&#128591;"
+		},
+		"Missa sex 08h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 5,
+			"hora": "08h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa sex 18h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 5,
+			"hora": "18h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa sáb 08h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 6,
+			"hora": "08h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa sáb 18h30": {
+			"nome": "Missa",
+			"frequencia": "semanal",
+			"diaDaSemana": 6,
+			"hora": "18h30",
+			"tipo": "missa",
+			"icone": "&#9962;"
+		},
+		"Missa de Natal 2021 12h00": {
+			"nome": "Missa",
+			"frequencia": "unico",
+			"data": "25/12/2021",
+			"hora": "12h00",
+			"tipo": "missa",
+			"icone": "&#9962;",
+			"escalar": 2,
+			"escalados": [ "Carlos", "Hélio" ]
+		},
+		"Missa de Ano Novo 2022 12h00": {
+			"nome": "Missa",
+			"frequencia": "unico",
+			"data": "01/01/2022",
+			"hora": "12h00",
+			"tipo": "missa",
+			"icone": "&#9962;",
+			"escalar": 2,
+			"escalados": [ "Dorival", "Hosana" ]
+		}
 	}
 }
