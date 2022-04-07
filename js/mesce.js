@@ -35,11 +35,22 @@ class GuiUtils {
 }
 
 class Menu {
+	static async agenda()	{
+		if (GuiUtils.isMobile()) {
+			Menu.agendaDia((new Date()).toDateString());
+		} else {
+			Menu.agendaMes((new Date()).toDateString());
+		}
+	}
+
 	static async agendaDia(data) {
 
 	}
 
 	static async agendaMes(data) {
+		GuiUtils.mensagensLimpa();
+		GuiUtils.conteudoLimpa();
+		
 		/*
 		const hoje = new Date((new Date()).toDateString());
 		let dataAgenda = new Date();
@@ -47,9 +58,6 @@ class Menu {
 			dataAgenda.setTime(parseInt(data));
 		}
 		dataAgenda = new Date(dataAgenda);
-		
-		GuiUtils.mensagensLimpa();
-		GuiUtils.conteudoLimpa();
 		
 		const table = $('<table class="table table-sm table-bordered agenda">');
 		GuiUtils.conteudoAdiciona(table);
@@ -154,13 +162,12 @@ class Menu {
 	}
 
 	static async escala() {
-		/*
 		GuiUtils.mensagensLimpa();
 		GuiUtils.conteudoLimpa();
-
+		
 		const table = $('<table class="table table-sm table-bordered table-striped escala">');
 		GuiUtils.conteudoAdiciona(table);
-
+		
 		const thead = $('<thead>');
 		thead.append(
 				$('<tr>')
@@ -171,16 +178,16 @@ class Menu {
 		table.append(thead);
 
 		const tbody = $('<tbody>');
+		
+		const escala = BackendUtils.getEscala();
 
-		for (const idItem of Object.keys(data.escala)) {
-			const item = data.escala[idItem];
+		for (const item of escala) {
 			let escalados = "";
 			for (const ministro of item.escalados) {
 				escalados += ministro + ", ";
 			}
 			escalados = escalados.substring(0, escalados.length - 2);
-
-			const situacao = item.escalados.length == item.escalar ? 'completa' : item.escalados.length > item.escalar ? 'revezamento' : 'faltando';
+			
 			tbody
 					.append($('<tr>')
 							.append($('<td class="missa">')
@@ -189,20 +196,11 @@ class Menu {
 									.append(item.escalar))
 							.append($('<td class="escalados">')
 									.append(escalados)
-									.append($('<span class="badge float-end ' + situacao + '">')
-											.append(situacao))));
+									.append($('<span class="badge float-end ' + item.situacao + '">')
+											.append(item.situacao))));
 		}
 
 		table.append(tbody);
-		*/
-	}
-
-	static async agenda()	{
-		if (GuiUtils.isMobile()) {
-			agendaDia((new Date()).toDateString());
-		} else {
-			agendaMes((new Date()).toDateString());
-		}
 	}
 
 	static async ministros() {
@@ -211,21 +209,10 @@ class Menu {
 
 		const table = $('<table class="table table-sm table-bordered table-striped table-hover ministros">');
 		GuiUtils.conteudoAdiciona(table);
-
-		const stats = {
-			total: 0,
-			disponiveis: {}
-		}
-		for (const idMinistro of Object.keys(data.ministros)) {
-			const ministro = data.ministros[idMinistro];
-			stats.total++;
-			for (const disponibilidade of ministro.disponibilidade) {
-				if (!stats.disponiveis[disponibilidade]) {
-					stats.disponiveis[disponibilidade] = 0;
-				}
-				stats.disponiveis[disponibilidade]++;
-			}
-		}
+		
+		const ministros = BackendUtils.getMinistros();
+		
+		const stats = Ministro.stats(ministros);
 
 		const thead = $('<thead>');
 		thead
@@ -240,8 +227,7 @@ class Menu {
 
 		const tbody = $('<tbody>');
 
-		for (const idMinistro of Object.keys(data.ministros)) {
-			const ministro = data.ministros[idMinistro];
+		for (const ministro of ministros) {
 			let nomeFormatado = Ministro.nomeFormatado(ministro);
 			const nome = $('<span>').append(nomeFormatado);
 			if (ministro.funcao) {
@@ -266,6 +252,6 @@ class Menu {
 }
 
 $(document).ready(async function() {
-	data = await BackendUtils.readData();
-	Menu.ministros();
+	await BackendUtils.readData();
+	Menu.agenda();
 });

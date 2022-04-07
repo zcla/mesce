@@ -1,6 +1,7 @@
 "use strict";
 
 class Ministro {
+	// TODO fazer não-estático
 	static nomeFormatado(ministro) {
 		// Nome de guerra está contido no nome. Ex.: <b>José Cláudio</b> Conceição de Aguiar
 		const pos = ministro.nome.indexOf(ministro.nomeGuerra);
@@ -69,6 +70,25 @@ class Ministro {
 			}
 			return 0;
 		});
+	}
+
+	static stats(ministros) {
+		const result = {
+			total: 0,
+			disponiveis: {}
+		}
+
+		for (const ministro of ministros) {
+			result.total++;
+			for (const disponibilidade of ministro.disponibilidade) {
+				if (!result.disponiveis[disponibilidade]) {
+					result.disponiveis[disponibilidade] = 0;
+				}
+				result.disponiveis[disponibilidade]++;
+			}
+		}
+
+		return result;
 	}
 
 /*
