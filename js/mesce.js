@@ -2,56 +2,23 @@
 
 let data = null;
 
-class GuiUtils {
-	static conteudoAdiciona(elemento) {
-		return $('#mesce').append(elemento);
-	}
-
-	static conteudoLimpa() {
-		$('#mesce').empty();
-	}
-
-	static isMobile() {
-		// https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device#20293441
-		try {
-			document.createEvent("TouchEvent");
-			return true;
-		} catch(e) {
-			return false;
-		}
-	}
-
-	static mensagensLimpa() {
-		$('#mensagens').empty();
-	}
-
-	static simboloCondicao(condicao) {
-		if (condicao) {
-			return $('<span class="condicaoTrue">').append('&check;');
-		} else {
-			return $('<span class="condicaoFalse">').append('&cross;');
-		}
-	}
-}
-
 class Menu {
-	static async agenda()	{
+	static agenda()	{
 		if (GuiUtils.isMobile()) {
-			Menu.agendaDia((new Date()).toDateString());
+			Menu.agendaDia((new Date()).getTime());
 		} else {
-			Menu.agendaMes((new Date()).toDateString());
+			Menu.agendaMes((new Date()).getTime());
 		}
 	}
 
-	static async agendaDia(data) {
+	static agendaDia(data) {
 
 	}
 
-	static async agendaMes(data) {
+	static agendaMes(data) {
 		GuiUtils.mensagensLimpa();
 		GuiUtils.conteudoLimpa();
 		
-		/*
 		const hoje = new Date((new Date()).toDateString());
 		let dataAgenda = new Date();
 		if (data) {
@@ -91,10 +58,9 @@ class Menu {
 		// Desfaz o exagero
 		dataInicial.setDate(dataInicial.getDate() + 1);
 		dataFinal.setDate(dataFinal.getDate() - 1);
+
+		const eventos = Evento.ordenaCronologicamente(Evento.instanciaEventosDoPeriodo(inicioMes, fimMes));
 		
-		const eventos = Evento.ordenaCronologicamente(Evento.instanciaPorPeriodo(inicioMes, fimMes));
-		
-		/*
 		const thead = $('<thead>');
 		thead.append(
 				$('<tr>')
@@ -107,18 +73,18 @@ class Menu {
 						.append($('<th>').append('Sáb'))
 		);
 		table.append(thead);
-
+		
 		const tbody = $('<tbody>');
-
+		
 		let tr = null;
-
+		
 		let dataAtual = new Date(dataInicial);
 		while (dataAtual <= dataFinal) {
 			if (dataAtual.getDay() % 7 == 0) {
 				tr = $('<tr>');
 				tbody.append(tr);
 			}
-
+			
 			let antesDepois = 'hoje';
 			if (dataAtual.toISOString() < hoje.toISOString()) {
 				antesDepois = 'antes';
@@ -126,10 +92,10 @@ class Menu {
 			if (dataAtual.toISOString() > hoje.toISOString()) {
 				antesDepois = 'depois';
 			}
-
+			
 			const td = $('<td class="' + antesDepois + '">');
 			tr.append(td);
-
+			
 			if (dataAtual.getMonth() == dataAgenda.getMonth()) {
 				td
 						.append($('<div class="agendaDia">')
@@ -158,10 +124,9 @@ class Menu {
 		}
 		
 		table.append(tbody);
-		*/
 	}
 
-	static async escala() {
+	static escala() {
 		GuiUtils.mensagensLimpa();
 		GuiUtils.conteudoLimpa();
 		
@@ -203,14 +168,14 @@ class Menu {
 		table.append(tbody);
 	}
 
-	static async ministros() {
+	static ministros() {
 		GuiUtils.mensagensLimpa();
 		GuiUtils.conteudoLimpa();
 
 		const table = $('<table class="table table-sm table-bordered table-striped table-hover ministros">');
 		GuiUtils.conteudoAdiciona(table);
 		
-		const ministros = BackendUtils.getMinistros();
+		const ministros = BackendUtils.getMinistrosComMandato();
 		
 		const stats = Ministro.stats(ministros);
 

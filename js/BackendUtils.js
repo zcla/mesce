@@ -7,6 +7,10 @@ class BackendUtils {
         this._data = await (await fetch('data/data.json')).json();
 	}
 
+    static getEventos() {
+        return this._data.eventos;
+    }
+
     static getEscala() {
 		const result = [];
 
@@ -38,7 +42,25 @@ class BackendUtils {
         });
     }
 
-	static getMinistros() { // TODO renomear para getMinistrosComMandato()
+	static getMinistros() {
+		const result = [];
+
+        for (const idMinistro of Object.keys(this._data.ministros)) {
+            const ministro = this._data.ministros[idMinistro];
+            result.push({
+                nome: ministro.nome,
+                nomeGuerra: ministro.nomeGuerra,
+                funcao: ministro.funcao,
+                aniversario: ministro.aniversario,
+                disponibilidade: ministro.disponibilidade
+                // TODO faltam afastamentos
+            });
+        }
+        return Ministro.ordenaPorNome(result);
+	}
+
+	static getMinistrosComMandato() {
+        // TODO usar this.getMinistros()
 		const result = [];
 
         for (const idMinistro of Object.keys(this._data.ministros)) {

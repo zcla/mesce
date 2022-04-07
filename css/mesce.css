@@ -19,6 +19,76 @@ thead tr th {
 	font-weight: bold;
 }
 
+/* Agenda */
+
+table.agenda .agendaDia {
+	background-color: #21409a;
+	border-radius: 5px;
+	color: #ffffff;
+	margin-left: 35%;
+	margin-right: 35%;
+	text-align: center;
+}
+
+table.agenda .agendaConteudo {
+	margin-top: 4px;
+	min-height: 90px;
+}
+
+table.agenda .antes {
+	opacity: 50%;
+	background-color: #eeeeee;
+}
+
+table.agenda .hoje {
+	background-color: #fffbcc;
+}
+
+table.agenda {
+	caption-side: top;
+}
+
+table.agenda caption {
+	background-color: #eeeeee;
+	font-size: x-large;
+	text-align: center;
+}
+
+table.agenda td {
+	width: 10%;
+}
+
+/* Agenda - eventos */
+
+table.agenda .evento {
+	background-color: #666666;
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: small;
+	margin-bottom: 4px;
+	padding: 2px 8px;
+}
+
+table.agenda .adoracao {
+	background-color: #00b6bd;
+}
+
+table.agenda .aniversario {
+	background-color: #f79448;
+}
+
+table.agenda .bencao {
+	background-color: #00b6bd;
+}
+
+table.agenda .missa {
+	background-color: #00b274;
+}
+
+table.agenda .santuario {
+	background-color: #1b75bc;
+}
+
 /* Escala */
 
 table.escala .completa {
