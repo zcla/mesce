@@ -144,7 +144,7 @@ class Menu {
 
 		const tbody = $('<tbody>');
 		
-		const escala = BackendUtils.getEscala();
+		const escala = Backend.getEscala();
 
 		for (const item of escala) {
 			let escalados = "";
@@ -175,7 +175,7 @@ class Menu {
 		const table = $('<table class="table table-sm table-bordered table-striped table-hover ministros">');
 		GuiUtils.conteudoAdiciona(table);
 		
-		const ministros = BackendUtils.getMinistrosComMandato();
+		const ministros = Ministro.listaComMandato();
 		
 		const stats = Ministro.stats(ministros);
 
@@ -217,6 +217,6 @@ class Menu {
 }
 
 $(document).ready(async function() {
-	await BackendUtils.readData();
-	Menu.agenda();
+	await Backend.init();
+	Menu.ministros();
 });

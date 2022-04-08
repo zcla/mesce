@@ -2,7 +2,18 @@
 
 class Ministro {
 	static listaTodos() {
-		const data = BackendUtils.getMinistros();
+		const data = Backend.GET_Ministro();
+
+		const result = [];
+		const ids = Object.keys(data);
+		for (const id of ids) {
+			result.push(new Ministro(id, data[id]));
+		}
+		return result;
+	}
+
+	static listaComMandato() {
+		const data = Backend.GET_Ministro();
 
 		const result = [];
 		const ids = Object.keys(data);
@@ -100,5 +111,21 @@ class Ministro {
 		}
 
 		return result;
+	}
+
+	constructor(id, obj) {
+		this.id = id;
+		this.nome = obj.nome;
+		this.nomeGuerra = obj.nomeGuerra;
+		this.aniversario = obj.aniversario;
+		this.funcao = obj.funcao;
+		this.comMandato = obj.comMandato;
+		this.disponibilidade = obj.disponibilidade;
+		// TODO faltam afastamentos
+		/*
+		if (obj.afastamentos) {
+			this.afastamentos = obj.afastamentos.slice();
+		}
+		*/
 	}
 }

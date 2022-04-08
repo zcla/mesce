@@ -85,7 +85,7 @@ class Evento {
 
 	static listaTodos() {
 		const result = [];
-		const data = BackendUtils.getEventos();
+		const data = Backend.getEventos();
 		const ids = Object.keys(data);
 		for (const id of ids) {
 			result.push(new Evento(id, data[id]));

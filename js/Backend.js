@@ -1,9 +1,9 @@
 "use strict";
 
-class BackendUtils {
+class Backend {
     static _data = null;
 
-	static async readData() {
+	static async init() {
         this._data = await (await fetch('data/data.json')).json();
 	}
 
@@ -42,7 +42,7 @@ class BackendUtils {
         });
     }
 
-	static getMinistros() {
+	static GET_Ministro() {
 		const result = [];
 
         for (const idMinistro of Object.keys(this._data.ministros)) {
@@ -55,26 +55,6 @@ class BackendUtils {
                 disponibilidade: ministro.disponibilidade
                 // TODO faltam afastamentos
             });
-        }
-        return Ministro.ordenaPorNome(result);
-	}
-
-	static getMinistrosComMandato() {
-        // TODO usar this.getMinistros()
-		const result = [];
-
-        for (const idMinistro of Object.keys(this._data.ministros)) {
-            const ministro = this._data.ministros[idMinistro];
-            if (ministro.comMandato) {
-                result.push({
-                    nome: ministro.nome,
-                    nomeGuerra: ministro.nomeGuerra,
-                    funcao: ministro.funcao,
-                    aniversario: ministro.aniversario,
-                    disponibilidade: ministro.disponibilidade
-                    // TODO faltam afastamentos
-                });
-            }
         }
         return Ministro.ordenaPorNome(result);
 	}
