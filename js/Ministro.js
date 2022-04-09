@@ -2,7 +2,7 @@
 
 class Ministro {
 	static async lista() {
-		const data = await Backend.GET_Ministro();
+		const data = this.ordenaPorNome(await Backend.GET_Ministro());
 
 		const result = {
 			ministros: [],
@@ -22,6 +22,18 @@ class Ministro {
 			}
 		}
         return result;
+	}
+
+	static ordenaPorNome(ministros) {
+		return ministros.sort(function (a, b) {
+			if (a.nome > b.nome) {
+				return 1;
+			}
+			if (a.nome < b.nome) {
+				return -1;
+			}
+			return 0;
+		});
 	}
 
 	constructor(id, obj) {
@@ -118,18 +130,6 @@ class Ministro {
 			result.push(new Ministro(id, data[id]));
 		}
         return result;
-	}
-
-	static ordenaPorNome(ministros) {
-		return ministros.sort(function (a, b) {
-			if (a.nome > b.nome) {
-				return 1;
-			}
-			if (a.nome < b.nome) {
-				return -1;
-			}
-			return 0;
-		});
 	}
 */
 }
