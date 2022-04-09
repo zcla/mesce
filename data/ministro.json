@@ -1,0 +1,236 @@
+{
+	"Adriana": {
+		"nome": "Adriana Porfírio de Aguiar",
+		"nomeGuerra": "Adriana",
+		"aniversario": "09/01",
+		"funcao": "Coordenadora",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ],
+		"afastamento": [
+			{
+				"inicio": "24/04/2022",
+				"fim": "03/05/2022",
+				"motivo": "viagem"
+			}
+		]
+	},
+	"Bernardete": {
+		"nome": "Maria Bernardete Briglia do Amaral",
+		"nomeGuerra": "Bernardete",
+		"aniversario": "02/02",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Carlos": {
+		"nome": "Carlos Alberto Ribeiro",
+		"nomeGuerra": "Carlos",
+		"aniversario": "06/05",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Cecília": {
+		"nome": "Maria Cecília Garcia Palma de Cintra",
+		"nomeGuerra": "Cecília",
+		"aniversario": "29/10",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Dorival": {
+		"nome": "Dorival Barboza Filho",
+		"nomeGuerra": "Dorival",
+		"aniversario": "22/11",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Eliane": {
+		"nome": "Eliane Maria Azevedo",
+		"nomeGuerra": "Eliane",
+		"aniversario": "20/02",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos" ],
+		"afastamento": [
+			{
+				"inicio": "30/03/2022",
+				"motivo": "saúde"
+			}
+		]
+	},
+	"Fátima": {
+		"nome": "Maria de Fátima da Silva Palmeira Ribeiro",
+		"nomeGuerra": "Fátima",
+		"aniversario": "30/07",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Hélio": {
+		"nome": "Hélio Puget Monteiro",
+		"nomeGuerra": "Hélio",
+		"aniversario": "09/07",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Hosana": {
+		"nome": "Hosana Maria Gonçalves Barboza",
+		"nomeGuerra": "Hosana",
+		"aniversario": "27/09",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Irmã Ana Lucia": {
+		"nome": "Ana Lucia Ferreira",
+		"nomeGuerra": "Irmã Ana Lucia",
+		"aniversario": "12/12",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Isabel": {
+		"nome": "Isabel Cristina Miranda Pinheiro",
+		"nomeGuerra": "Isabel",
+		"aniversario": "16/11",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Iza": {
+		"nome": "Iza Maria de Souza Oliveira",
+		"nomeGuerra": "Iza",
+		"aniversario": "12/11",
+		"comMandato": true,
+		"disponibilidade": [ ]
+	},
+	"Jean": {
+		"nome": "Jean Rodrigues Oliveira",
+		"nomeGuerra": "Jean",
+		"aniversario": "17/10",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"José Cláudio": {
+		"nome": "José Cláudio Conceição de Aguiar",
+		"nomeGuerra": "José Cláudio",
+		"aniversario": "05/10",
+		"funcao": "Coordenador",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ],
+		"afastamento": [
+			{
+				"inicio": "24/04/2022",
+				"fim": "03/05/2022",
+				"motivo": "viagem"
+			}
+		]
+	},
+	"José Francisco": {
+		"nome": "José Francisco de Paula Freitas Portella",
+		"nomeGuerra": "José Francisco",
+		"aniversario": "03/11",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Ligia": {
+		"nome": "Ligia Cavalcante Ponte",
+		"nomeGuerra": "Ligia",
+		"aniversario": "10/02",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Liliana": {
+		"nome": "Liliana de Abreu Cunha Campos",
+		"nomeGuerra": "Liliana",
+		"aniversario": "02/08",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Luciano": {
+		"nome": "Luciano Gonçalves Borba Assunção",
+		"nomeGuerra": "Luciano",
+		"aniversario": "05/08",
+		"comMandato": true,
+		"disponibilidade": [ ]
+	},
+	"Maria Helena": {
+		"nome": "Maria Helena Corrêa Sette Tôrres",
+		"nomeGuerra": "Maria Helena",
+		"aniversario": "17/01",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Mariana": {
+		"nome": "Mariana Souza Furtado",
+		"nomeGuerra": "Mariana",
+		"aniversario": "13/07",
+		"funcao": "Vice-coordenadora",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Marise": {
+		"nome": "Marise Gassenferth Veloso Lafetá",
+		"nomeGuerra": "Marise",
+		"aniversario": "30/07",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Marta Marsiaj": {
+		"nome": "Marta Elvira Pereira de Marsiaj",
+		"nomeGuerra": "Marta Marsiaj",
+		"aniversario": "17/05",
+		"funcao": "Secretária",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Martha Sally": {
+		"nome": "Martha Sally Blanco Joffily Bezerra",
+		"nomeGuerra": "Martha Sally",
+		"aniversario": "26/10",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Monica": {
+		"nome": "Monica Ferrari Villarino",
+		"nomeGuerra": "Monica",
+		"aniversario": "24/11",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Olímpia": {
+		"nome": "Olímpia Alves Pinheiro Tannure",
+		"nomeGuerra": "Olímpia",
+		"aniversario": "11/12",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Patricia": {
+		"nome": "Patricia Souza Furtado",
+		"nomeGuerra": "Patricia",
+		"aniversario": "16/09",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Rubélio": {
+		"nome": "José Rubélio de Oliveira Lima",
+		"nomeGuerra": "Rubélio",
+		"aniversario": "24/08",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Silvia": {
+		"nome": "Silvia Cavalcante Ponte",
+		"nomeGuerra": "Silvia",
+		"aniversario": "08/01",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Solange": {
+		"nome": "Solange Gadioli dos Santos Ferreira",
+		"nomeGuerra": "Solange",
+		"aniversario": "31/01",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	},
+	"Vânia": {
+		"nome": "Vânia Cavalcante Ponte",
+		"nomeGuerra": "Vânia",
+		"aniversario": "01/02",
+		"comMandato": true,
+		"disponibilidade": [ "enfermos", "missas" ]
+	}
+}

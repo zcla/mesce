@@ -3,6 +3,7 @@
 let data = null;
 
 class Menu {
+/*
 	static agenda()	{
 		if (GuiUtils.isMobile()) {
 			Menu.agendaDia((new Date()).getTime());
@@ -167,33 +168,32 @@ class Menu {
 
 		table.append(tbody);
 	}
+*/
 
-	static ministros() {
+	static async ministrosLista() {
 		GuiUtils.mensagensLimpa();
 		GuiUtils.conteudoLimpa();
 
 		const table = $('<table class="table table-sm table-bordered table-striped table-hover ministros">');
 		GuiUtils.conteudoAdiciona(table);
-		
-		const ministros = Ministro.listaComMandato();
-		
-		const stats = Ministro.stats(ministros);
 
+		const lista = await Ministro.lista();
+		
 		const thead = $('<thead>');
 		thead
 				.append($('<tr>')
-						.append($('<th rowspan="2">').append('Nome (' + stats.total + ')'))
+						.append($('<th rowspan="2">').append('Nome (' + lista.total + ')'))
 						.append($('<th rowspan="2">').append('Aniversário'))
 						.append($('<th colspan="2">').append('Disponibilidade')))
 				.append($('<tr>')
-						.append($('<th>').append('Enfermos (' + stats.disponiveis.enfermos + ')'))
-						.append($('<th>').append('Missas (' + stats.disponiveis.missas + ')')));
+						.append($('<th>').append('Enfermos (' + lista.disponibilidade.enfermos + ')'))
+						.append($('<th>').append('Missas (' + lista.disponibilidade.missas + ')')));
 		table.append(thead);
 
 		const tbody = $('<tbody>');
 
-		for (const ministro of ministros) {
-			let nomeFormatado = Ministro.nomeFormatado(ministro);
+		for (const ministro of lista.ministros) {
+			let nomeFormatado = ministro.nomeFormatado();
 			const nome = $('<span>').append(nomeFormatado);
 			if (ministro.funcao) {
 				nome.append($('<span class="badge float-end funcao">')
@@ -217,6 +217,6 @@ class Menu {
 }
 
 $(document).ready(async function() {
-	await Backend.init();
-	Menu.ministros();
+	await Backend.init(); // TODO Retirar; deve ser sob demanda.
+	Menu.ministrosLista();
 });
