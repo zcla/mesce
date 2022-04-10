@@ -9,9 +9,7 @@ class Ministro {
 			total: 0,
 			disponibilidade: {}
 		};
-		const ids = Object.keys(data);
-		for (const id of ids) {
-			const ministro = new Ministro(id, data[id]);
+		for (const ministro of data) {
 			result.ministros.push(ministro);
 			result.total++;
 			for (const disponibilidade of ministro.disponibilidade) {
