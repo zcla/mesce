@@ -3,6 +3,7 @@
 class Ministro {
 	static async lista() {
 		const data = this.ordenaPorNome(await Backend.GET_Ministro());
+		const escala = await Backend.GET_Escala('Missas');
 
 		const result = {
 			ministros: [],
@@ -10,13 +11,20 @@ class Ministro {
 			disponibilidade: {}
 		};
 		for (const ministro of data) {
-			result.ministros.push(new Ministro(ministro));
+			const objMinistro = new Ministro(ministro)
+			result.ministros.push(objMinistro);
 			result.total++;
 			for (const disponibilidade of ministro.disponibilidade) {
 				if (!result.disponibilidade[disponibilidade]) {
 					result.disponibilidade[disponibilidade] = 0;
 				}
 				result.disponibilidade[disponibilidade]++;
+			}
+			objMinistro.escaladoMissas = 0;
+			for (const item of escala) {
+				if (item.escalados.includes(ministro.id)) {
+					objMinistro.escaladoMissas++;
+				}
 			}
 		}
         return result;
@@ -106,28 +114,4 @@ class Ministro {
 		}
 		return formataNome(this.nome, this.nomeGuerra)
 	}
-
-/*
-	static listaTodos() {
-		const data = Backend.GET_Ministro();
-
-		const result = [];
-		const ids = Object.keys(data);
-		for (const id of ids) {
-			result.push(new Ministro(id, data[id]));
-		}
-		return result;
-	}
-
-	static listaComMandato() {
-		const data = Backend.GET_Ministro();
-
-		const result = [];
-		const ids = Object.keys(data);
-		for (const id of ids) {
-			result.push(new Ministro(id, data[id]));
-		}
-        return result;
-	}
-*/
 }
