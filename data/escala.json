@@ -1,0 +1,116 @@
+{
+	"Missas": {
+		"Domingo 10h00": {
+			"nome": "Domingo 10h00",
+			"evento": "Missa dom 10h00",
+			"ordem": 1,
+			"escalar": 2,
+			"escalados": [ "Dorival", "Hosana", "Isabel", "Olímpia" ]
+		},
+		"Domingo 12h00": {
+			"nome": "Domingo 12h00",
+			"evento": "Missa dom 12h00",
+			"ordem": 2,
+			"escalar": 2,
+			"escalados": [ "Bernardete", "Liliana", "Maria Helena" ]
+		},
+		"Domingo 18h30": {
+			"nome": "Domingo 18h30",
+			"evento": "Missa dom 18h30",
+			"ordem": 3,
+			"escalar": 3,
+			"escalados": [ "Marta Marsiaj", "Martha Sally", "Solange" ]
+		},
+		"Domingo 20h00": {
+			"nome": "Domingo 20h00",
+			"evento": "Missa dom 20h00",
+			"ordem": 4,
+			"escalar": 2,
+			"escalados": [ "Cecília", "Irmã Ana Lucia", "Marise" ]
+		},
+		"Segunda 08h30": {
+			"nome": "Segunda 08h30",
+			"evento": "Missa seg 08h30",
+			"ordem": 5,
+			"escalar": 2,
+			"escalados": [ "Cecília", "Jean", "Monica" ]
+		},
+		"Segunda 18h30": {
+			"nome": "Segunda 18h30",
+			"evento": "Missa seg 18h30",
+			"ordem": 6,
+			"escalar": 2,
+			"escalados": [ "Dorival", "Hosana" ]
+		},
+		"Terça 08h30": {
+			"nome": "Terça 08h30",
+			"evento": "Missa ter 08h30",
+			"ordem": 7,
+			"escalar": 2,
+			"escalados": [ "Ligia", "Silvia", "Vânia" ]
+		},
+		"Terça 18h30": {
+			"nome": "Terça 18h30",
+			"evento": "Missa ter 18h30",
+			"ordem": 8,
+			"escalar": 2,
+			"escalados": [ "Marta Marsiaj", "Solange" ]
+		},
+		"Quarta 08h30": {
+			"nome": "Quarta 08h30",
+			"evento": "Missa qua 08h30",
+			"ordem": 9,
+			"escalar": 2,
+			"escalados": [ "Isabel", "Olímpia" ]
+		},
+		"Quarta 18h30": {
+			"nome": "Quarta 18h30",
+			"evento": "Missa qua 18h30",
+			"ordem": 10,
+			"escalar": 2,
+			"escalados": [ "Hélio", "Marise" ]
+		},
+		"Quinta 08h30": {
+			"nome": "Quinta 08h30",
+			"evento": "Missa qui 08h30",
+			"ordem": 11,
+			"escalar": 2,
+			"escalados": [ "Ligia", "Mariana" ]
+		},
+		"Quinta 18h30": {
+			"nome": "Quinta 18h30",
+			"evento": "Missa qui 18h30",
+			"ordem": 12,
+			"escalar": 2,
+			"escalados": [ "Hosana", "Patricia" ]
+		},
+		"Sexta 08h30": {
+			"nome": "Sexta 08h30",
+			"evento": "Missa sex 08h30",
+			"ordem": 13,
+			"escalar": 2,
+			"escalados": [ "Adriana", "José Cláudio" ]
+		},
+		"Sexta 18h30": {
+			"nome": "Sexta 18h30",
+			"evento": "Missa sex 18h30",
+			"ordem": 14,
+			"escalar": 2,
+			"escalados": [ "Liliana", "Martha Sally" ]
+		},
+		"Sábado 08h30": {
+			"nome": "Sábado 08h30",
+			"evento": "Missa sáb 08h30",
+			"ordem": 15,
+			"escalar": 2,
+			"escalados": [ "Maria Helena", "Silvia" ]
+		},
+		"Sábado 18h30": {
+			"nome": "Sábado 18h30",
+			"evento": "Missa sáb 18h30",
+			"ordem": 16,
+			"escalar": 2,
+			"escalados": [ "Carlos", "Fátima", "Hélio", "Rubélio", "Vânia" ]
+		}
+	}
+}

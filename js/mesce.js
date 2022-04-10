@@ -5,6 +5,92 @@ let data = null;
 // TODO https://www.jsviews.com/
 
 class Menu {
+	static async escala() {
+		GuiUtils.mensagensLimpa();
+		GuiUtils.conteudoLimpa();
+		
+		const table = $('<table class="table table-sm table-bordered table-striped escala">');
+		GuiUtils.conteudoAdiciona(table);
+		
+		const escala = await Escala.mostraMissas();
+
+		const thead = $('<thead>');
+		thead.append(
+				$('<tr>')
+						.append($('<th>').append('Missa'))
+						.append($('<th>').append('Escalar'))
+						.append($('<th>').append('Ministros'))
+		);
+		table.append(thead);
+
+		const tbody = $('<tbody>');
+		
+		for (const item of escala.escala) {
+			let escalados = "";
+			for (const ministro of item.escalados) {
+				escalados += ministro + ", ";
+			}
+			escalados = escalados.substring(0, escalados.length - 2);
+			
+			tbody
+					.append($('<tr>')
+							.append($('<td class="missa">')
+									.append(item.nome))
+							.append($('<td class="escalar">')
+									.append(item.escalar))
+							.append($('<td class="escalados">')
+									.append(escalados)
+									.append($('<span class="badge float-end ' + item.situacao() + '">')
+											.append(item.situacao()))));
+		}
+
+		table.append(tbody);
+	}
+
+	static async ministrosLista() {
+		GuiUtils.mensagensLimpa();
+		GuiUtils.conteudoLimpa();
+
+		const table = $('<table class="table table-sm table-bordered table-striped table-hover ministros">');
+		GuiUtils.conteudoAdiciona(table);
+
+		const lista = await Ministro.lista();
+		
+		const thead = $('<thead>');
+		thead
+				.append($('<tr>')
+						.append($('<th rowspan="2">').append('Nome (' + lista.total + ')'))
+						.append($('<th rowspan="2">').append('Aniversário'))
+						.append($('<th colspan="2">').append('Disponibilidade')))
+				.append($('<tr>')
+						.append($('<th>').append('Enfermos (' + lista.disponibilidade.enfermos + ')'))
+						.append($('<th>').append('Missas (' + lista.disponibilidade.missas + ')')));
+		table.append(thead);
+
+		const tbody = $('<tbody>');
+
+		for (const ministro of lista.ministros) {
+			let nomeFormatado = ministro.nomeFormatado();
+			const nome = $('<span>').append(nomeFormatado);
+			if (ministro.funcao) {
+				nome.append($('<span class="badge float-end funcao">')
+						.append(ministro.funcao));
+			}
+
+			tbody
+					.append($('<tr>')
+							.append($('<td class="nome">')
+									.append(nome))
+							.append($('<td class="aniversario">')
+									.append(ministro.aniversario))
+							.append($('<td class="disponibilidade_enfermos">')
+									.append(GuiUtils.simboloCondicao(ministro.disponibilidade.includes('enfermos'))))
+							.append($('<td class="disponibilidade_missas">')
+									.append(GuiUtils.simboloCondicao(ministro.disponibilidade.includes('missas')))));
+		}
+
+		table.append(tbody);
+	}
 /*
 	static agenda()	{
 		if (GuiUtils.isMobile()) {
@@ -128,97 +214,10 @@ class Menu {
 		
 		table.append(tbody);
 	}
-
-	static escala() {
-		GuiUtils.mensagensLimpa();
-		GuiUtils.conteudoLimpa();
-		
-		const table = $('<table class="table table-sm table-bordered table-striped escala">');
-		GuiUtils.conteudoAdiciona(table);
-		
-		const thead = $('<thead>');
-		thead.append(
-				$('<tr>')
-						.append($('<th>').append('Missa'))
-						.append($('<th>').append('Escalar'))
-						.append($('<th>').append('Ministros'))
-		);
-		table.append(thead);
-
-		const tbody = $('<tbody>');
-		
-		const escala = Backend.getEscala();
-
-		for (const item of escala) {
-			let escalados = "";
-			for (const ministro of item.escalados) {
-				escalados += ministro + ", ";
-			}
-			escalados = escalados.substring(0, escalados.length - 2);
-			
-			tbody
-					.append($('<tr>')
-							.append($('<td class="missa">')
-									.append(item.nome))
-							.append($('<td class="escalar">')
-									.append(item.escalar))
-							.append($('<td class="escalados">')
-									.append(escalados)
-									.append($('<span class="badge float-end ' + item.situacao + '">')
-											.append(item.situacao))));
-		}
-
-		table.append(tbody);
-	}
 */
-
-	static async ministrosLista() {
-		GuiUtils.mensagensLimpa();
-		GuiUtils.conteudoLimpa();
-
-		const table = $('<table class="table table-sm table-bordered table-striped table-hover ministros">');
-		GuiUtils.conteudoAdiciona(table);
-
-		const lista = await Ministro.lista();
-		
-		const thead = $('<thead>');
-		thead
-				.append($('<tr>')
-						.append($('<th rowspan="2">').append('Nome (' + lista.total + ')'))
-						.append($('<th rowspan="2">').append('Aniversário'))
-						.append($('<th colspan="2">').append('Disponibilidade')))
-				.append($('<tr>')
-						.append($('<th>').append('Enfermos (' + lista.disponibilidade.enfermos + ')'))
-						.append($('<th>').append('Missas (' + lista.disponibilidade.missas + ')')));
-		table.append(thead);
-
-		const tbody = $('<tbody>');
-
-		for (const ministro of lista.ministros) {
-			let nomeFormatado = ministro.nomeFormatado();
-			const nome = $('<span>').append(nomeFormatado);
-			if (ministro.funcao) {
-				nome.append($('<span class="badge float-end funcao">')
-						.append(ministro.funcao));
-			}
-
-			tbody
-					.append($('<tr>')
-							.append($('<td class="nome">')
-									.append(nome))
-							.append($('<td class="aniversario">')
-									.append(ministro.aniversario))
-							.append($('<td class="disponibilidade_enfermos">')
-									.append(GuiUtils.simboloCondicao(ministro.disponibilidade.includes('enfermos'))))
-							.append($('<td class="disponibilidade_missas">')
-									.append(GuiUtils.simboloCondicao(ministro.disponibilidade.includes('missas')))));
-		}
-
-		table.append(tbody);
-	}
 }
 
 $(document).ready(async function() {
 	await Backend.init(); // TODO Retirar; deve ser sob demanda.
-	Menu.ministrosLista();
+	Menu.escala();
 });

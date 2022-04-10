@@ -13,9 +13,23 @@ class Backend {
         return result;
     }
 
+    // TODO deprecated
 	static async init() {
         this._data = await (await fetch('data/data.json')).json();
 	}
+
+    static async GET_Escala(nome) {
+		const result = [];
+
+        const escala = await this.getData('escala');
+
+        for (const idItem of Object.keys(escala[nome])) {
+            const item = escala[nome][idItem];
+            item.id = idItem;
+            result.push(item);
+        }
+        return result;
+    }
 
 	static async GET_Ministro() {
 		const result = [];
@@ -24,14 +38,8 @@ class Backend {
 
         for (const idMinistro of Object.keys(ministros)) {
             const ministro = ministros[idMinistro];
-            result.push({
-                nome: ministro.nome,
-                nomeGuerra: ministro.nomeGuerra,
-                funcao: ministro.funcao,
-                aniversario: ministro.aniversario,
-                disponibilidade: ministro.disponibilidade
-                // TODO faltam afastamentos
-            });
+            ministro.id = idMinistro;
+            result.push(ministro);
         }
         return result;
 	}
@@ -39,37 +47,6 @@ class Backend {
 /*
     static getEventos() {
         return this._data.eventos;
-    }
-
-    static getEscala() {
-		const result = [];
-
-        for (const idEscala of Object.keys(this._data.escala)) {
-            const escala = this._data.escala[idEscala];
-            const escalados = [];
-            for (const escalado of escala.escalados) {
-                const ministro = this._data.ministros[escalado];
-                escalados.push(ministro.nomeGuerra);
-            }
-            escalados.sort();
-            result.push({
-                ordem: escala.ordem,
-                nome: escala.nome,
-                escalar: escala.escalar,
-                escalados: escalados,
-                situacao: escalados.length == escala.escalar ? 'completa' : escalados.length > escala.escalar ? 'revezamento' : 'faltando'
-            });
-        }
-
-        return result.sort(function(a, b) {
-			if (a.ordem > b.ordem) {
-				return 1;
-			}
-			if (a.ordem < b.ordem) {
-				return -1;
-			}
-			return 0;
-        });
     }
 */
 }

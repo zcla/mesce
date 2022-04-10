@@ -10,11 +10,16 @@
 		<title>Mesce - Paróquia São Pedro de Alcântara</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<link rel="stylesheet" href="css/mesce.css">
+		<!-- Geral (menu/visão/html/sei lá) -->
 		<script src="js/mesce.js"></script>
-		<script src="js/Backend.js"></script>
+		<!-- Utils -->
 		<script src="js/DateUtils.js"></script>
 		<script src="js/DominioUtils.js"></script>
 		<script src="js/GuiUtils.js"></script>
+		<!-- Backend -->
+		<script src="js/Backend.js"></script>
+		<!-- Negócio-->
+		<script src="js/Escala.js"></script>
 		<script src="js/Evento.js"></script>
 		<script src="js/Ministro.js"></script>
 	</head>
@@ -25,10 +30,10 @@
 					<h4>Mesce - Paróquia São Pedro de Alcântara</h4>
 				</a>
 				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<li><a class="nav-link px-2 text-white" href="javascript:Menu.escala();">Escala</a></li>
 					<li><a class="nav-link px-2 text-white" href="javascript:Menu.ministrosLista();">Ministros</a></li>
 					<!--
 					<li><a class="nav-link px-2 text-white" href="javascript:Menu.agenda();">Agenda</a></li>
-					<li><a class="nav-link px-2 text-white" href="javascript:Menu.escala();">Escala</a></li>
 					-->
 				</ul>
 			</div>
