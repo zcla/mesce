@@ -17,9 +17,9 @@ class Menu {
 		const thead = $('<thead>');
 		thead.append(
 				$('<tr>')
-						.append($('<th>').append('Missa'))
-						.append($('<th>').append('Escalar'))
-						.append($('<th>').append('Ministros'))
+						.append($('<th>').append('Missa (' + escala.escala.length + ')'))
+						.append($('<th>').append('Escalar (' + escala.escalar + ')'))
+						.append($('<th>').append('Ministros escalados (' + escala.escalados + ')'))
 		);
 		table.append(thead);
 

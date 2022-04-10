@@ -6,10 +6,14 @@ class Escala {
 		const data = this.ordena(await Backend.GET_Escala(tipo));
 
 		const result = {
-			escala: []
+			escala: [],
+			escalar: 0,
+			escalados: 0
 		};
 		for (const escala of data) {
 			result.escala.push(new Escala(tipo, escala));
+			result.escalar += escala.escalar;
+			result.escalados += escala.escalados.length;
 		}
         return result;
 	}
