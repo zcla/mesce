@@ -14,11 +14,6 @@ class Backend {
         return result;
     }
 
-    // TODO deprecated
-	static async init() {
-        this._data = await (await fetch('data/data.json')).json();
-	}
-
     static async GET_Escala(nome) {
 		const result = [];
 

@@ -222,6 +222,5 @@ class Menu {
 }
 
 $(document).ready(async function() {
-	await Backend.init(); // TODO Retirar; deve ser sob demanda.
 	Menu.escala();
 });
