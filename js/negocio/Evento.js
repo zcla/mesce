@@ -1,5 +1,6 @@
 "use strict";
 
+/*
 class Evento {
 	static instanciaEventosDoPeriodo(dataInicial, dataFinal) {
 		// Retira a hora da data
@@ -138,3 +139,4 @@ class EventoInstancia extends Evento {
 		this.eventoPai = obj.eventoPai;
 	}
 }
+*/

@@ -10,6 +10,7 @@ class Backend {
             result = await (await fetch('data/' + qual + '.json')).json();
             this.__data[qual] = result;
         }
+        // TODO fazer uma checagem de "FK"s
         return result;
     }
 
