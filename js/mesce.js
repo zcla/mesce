@@ -76,6 +76,10 @@ class Menu {
 				nome.append($('<span class="badge float-end funcao">')
 						.append(ministro.funcao));
 			}
+			const disponibilidadeMissas = $('<span>').append(GuiUtils.simboloCondicao(ministro.disponibilidade.includes('missas')));
+			if (ministro.escaladoMissas) {
+				disponibilidadeMissas.append(' (' + ministro.escaladoMissas + ')')
+			}
 
 			tbody
 					.append($('<tr>')
@@ -86,7 +90,7 @@ class Menu {
 							.append($('<td class="disponibilidade_enfermos">')
 									.append(GuiUtils.simboloCondicao(ministro.disponibilidade.includes('enfermos'))))
 							.append($('<td class="disponibilidade_missas">')
-									.append(GuiUtils.simboloCondicao(ministro.disponibilidade.includes('missas')))));
+									.append(disponibilidadeMissas)));
 		}
 
 		table.append(tbody);
@@ -219,5 +223,5 @@ class Menu {
 
 $(document).ready(async function() {
 	await Backend.init(); // TODO Retirar; deve ser sob demanda.
-	Menu.escala();
+	Menu.ministrosLista();
 });
