@@ -10,7 +10,7 @@ class Ministro {
 			disponibilidade: {}
 		};
 		for (const ministro of data) {
-			result.ministros.push(ministro);
+			result.ministros.push(new Ministro(ministro));
 			result.total++;
 			for (const disponibilidade of ministro.disponibilidade) {
 				if (!result.disponibilidade[disponibilidade]) {
@@ -34,8 +34,8 @@ class Ministro {
 		});
 	}
 
-	constructor(id, obj) {
-		this.id = id;
+	constructor(obj) {
+		this.id = obj.id;
 		this.nome = obj.nome;
 		this.nomeGuerra = obj.nomeGuerra;
 		this.aniversario = obj.aniversario;
