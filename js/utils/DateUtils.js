@@ -1,5 +1,10 @@
 
 class DateUtils {
+	// TODO Procurar lugares do código onde não usa isso e deveria
+	static adicionaDias(data, dias) {
+		return new Date(data.getTime() + (dias * 86400000));
+	}
+
 	static dataSemHora(data) {
 		return new Date(data.toDateString());
 	}

@@ -98,15 +98,75 @@ class Menu {
 	
 	static async agenda(data)	{
 		if (GuiUtils.isMobile()) {
-			// TODO await Menu.agendaDia(data);
-			await Menu.agendaMes(data);
+			await Menu.agendaDia(data);
 		} else {
 			await Menu.agendaMes(data);
 		}
 	}
 
-	static agendaDia(data) {
-		// TODO fazer
+	// TODO otimizar o código
+	// TODO reaproveitar partes repetidas
+	static async agendaDia(data) {
+		GuiUtils.mensagensLimpa();
+		GuiUtils.conteudoLimpa();
+		
+		const hoje = new Date((new Date()).toDateString());
+		let dataAgenda = new Date();
+		if (data) {
+			dataAgenda.setTime(parseInt(data));
+		}
+		dataAgenda = new Date(dataAgenda);
+
+		const eventos = await Evento.agendaMes(dataAgenda);
+		
+		const table = $('<table class="table table-sm table-bordered agenda">');
+		GuiUtils.conteudoAdiciona(table);
+		
+		table.append($('<caption>')
+				.append($('<button type="button" class="btn btn-dark float-start" onclick="javascript:Menu.agenda(\'' + DateUtils.adicionaDias(dataAgenda, -1).getTime() + '\');">')
+						.append("&#8592;"))
+				.append("&nbsp;")
+				.append(dataAgenda.getDate() + '/' + (dataAgenda.getMonth() + 1).toString().padStart(2, "0") + '/' + dataAgenda.getFullYear())
+				.append("&nbsp;")
+				.append($('<button type="button" class="btn btn-dark float-end" onclick="javascript:Menu.agenda(\'' + DateUtils.adicionaDias(dataAgenda, 1).getTime() + '\');">')
+						.append("&#8594;")));
+		
+		const tbody = $('<tbody>');
+		
+		let tr = $('<tr>');
+		tbody.append(tr);
+		
+		let antesDepois = 'hoje';
+		if (dataAgenda.toISOString() < hoje.toISOString()) {
+			antesDepois = 'antes';
+		}
+		if (dataAgenda.toISOString() > hoje.toISOString()) {
+			antesDepois = 'depois';
+		}
+		
+		const td = $('<td class="' + antesDepois + '">');
+		tr.append(td);
+		
+		td.append($('<div class="agendaConteudo">'));
+
+		for (const evento of eventos.eventos) {
+			if (evento.data.toDateString() == dataAgenda.toDateString()) {
+				const div = $('<div class="evento">');
+				if (evento.tipo) {
+					div.addClass(evento.tipo);
+				}
+				if (evento.icone) {
+					div.append(evento.icone).append(' ');
+				}
+				if (evento.hora) {
+					div.append($('<b>').append(evento.hora)).append(' ');
+				}
+				div.append(evento.nome);
+				$(tr.find(".agendaConteudo").slice(-1)[0]).append(div);
+			}
+		}
+
+		table.append(tbody);
 	}
 
 	static async agendaMes(data) {
