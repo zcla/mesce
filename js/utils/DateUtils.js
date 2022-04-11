@@ -1,5 +1,13 @@
 
 class DateUtils {
+	static dataSemHora(data) {
+		return new Date(data.toDateString());
+	}
+
+	static diaMes(data) {
+		return data.getDate().toString().padStart(2, "0") + '/' + (data.getMonth() + 1).toString().padStart(2, "0");
+	}
+
 	static mesmaData(data1, data2) {
 		return data1.getTime() == data2.getTime();
 	}

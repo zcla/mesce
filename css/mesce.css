@@ -85,6 +85,10 @@ table.agenda .missa {
 	background-color: #00b274;
 }
 
+table.agenda .reuniao {
+	background-color: #454fa1;
+}
+
 table.agenda .santuario {
 	background-color: #1b75bc;
 }

@@ -95,20 +95,21 @@ class Menu {
 
 		table.append(tbody);
 	}
-/*
-	static agenda()	{
+	
+	static async agenda(data)	{
 		if (GuiUtils.isMobile()) {
-			Menu.agendaDia((new Date()).getTime());
+			// TODO await Menu.agendaDia(data);
+			await Menu.agendaMes(data);
 		} else {
-			Menu.agendaMes((new Date()).getTime());
+			await Menu.agendaMes(data);
 		}
 	}
 
 	static agendaDia(data) {
-
+		// TODO fazer
 	}
 
-	static agendaMes(data) {
+	static async agendaMes(data) {
 		GuiUtils.mensagensLimpa();
 		GuiUtils.conteudoLimpa();
 		
@@ -118,28 +119,23 @@ class Menu {
 			dataAgenda.setTime(parseInt(data));
 		}
 		dataAgenda = new Date(dataAgenda);
+
+		const eventos = await Evento.agendaMes(dataAgenda);
+
+		let dataInicial = eventos.inicioMes;
+		dataInicial.setDate(dataInicial.getDate() - dataInicial.getDay());
+		let dataFinal = eventos.fimMes;
+		while (dataFinal.getDay() % 7 != 6) {
+			dataFinal.setDate(dataFinal.getDate() + 1);
+		}
+
+		// Exagera pra garantir que estará nos meses anterior e seguinte
+		dataInicial.setDate(dataInicial.getDate() - 1);
+		dataFinal.setDate(dataFinal.getDate() + 1);
 		
 		const table = $('<table class="table table-sm table-bordered agenda">');
 		GuiUtils.conteudoAdiciona(table);
 		
-		let inicioMes = new Date(dataAgenda.toDateString());
-		inicioMes.setDate(1);
-		let fimMes = new Date(dataAgenda.toDateString());
-		while (fimMes.getMonth() == dataAgenda.getMonth()) {
-			fimMes.setDate(fimMes.getDate() + 1);
-		}
-		fimMes.setDate(fimMes.getDate() - 1);
-		
-		let dataInicial = new Date(inicioMes);
-		dataInicial.setDate(dataInicial.getDate() - dataInicial.getDay());
-		let dataFinal = new Date(fimMes);
-		while (dataFinal.getDay() % 7 != 6) {
-			dataFinal.setDate(dataFinal.getDate() + 1);
-		}
-		
-		// Exagera pra garantir que estará nos meses anterior e seguinte
-		dataInicial.setDate(dataInicial.getDate() - 1);
-		dataFinal.setDate(dataFinal.getDate() + 1);
 		table.append($('<caption>')
 				.append($('<button type="button" class="btn btn-dark float-start" onclick="javascript:Menu.agenda(\'' + dataInicial.getTime() + '\');">')
 						.append("&#8592;"))
@@ -148,12 +144,11 @@ class Menu {
 				.append("&nbsp;")
 				.append($('<button type="button" class="btn btn-dark float-end" onclick="javascript:Menu.agenda(\'' + dataFinal.getTime() + '\');">')
 						.append("&#8594;")));
+
 		// Desfaz o exagero
 		dataInicial.setDate(dataInicial.getDate() + 1);
 		dataFinal.setDate(dataFinal.getDate() - 1);
 
-		const eventos = Evento.ordenaCronologicamente(Evento.instanciaEventosDoPeriodo(inicioMes, fimMes));
-		
 		const thead = $('<thead>');
 		thead.append(
 				$('<tr>')
@@ -195,7 +190,7 @@ class Menu {
 								.append(dataAtual.getDate()))
 						.append($('<div class="agendaConteudo">'));
 
-				for (const evento of eventos) {
+				for (const evento of eventos.eventos) {
 					if (evento.data.toDateString() == dataAtual.toDateString()) {
 						const div = $('<div class="evento">');
 						if (evento.tipo) {
@@ -215,12 +210,10 @@ class Menu {
 
 			dataAtual.setDate(dataAtual.getDate() + 1);
 		}
-		
 		table.append(tbody);
 	}
-*/
 }
 
 $(document).ready(async function() {
-	Menu.escala();
+	Menu.agenda();
 });

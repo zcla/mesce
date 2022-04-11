@@ -130,9 +130,9 @@
 	"Adoração 1a sex 19h00": {
 		"nome": "Adoração",
 		"frequencia": "mensal",
-		"diaDaSemana": 4,
+		"diaDaSemana": 5,
 		"enesimo": 1,
-		"hora": "19h00",
+		"hora": "09h00",
 		"tipo": "adoracao",
 		"icone": "&#128591;"
 	},

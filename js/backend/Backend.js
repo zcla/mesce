@@ -1,14 +1,13 @@
 "use strict";
 
 class Backend {
-    static __data = {};
-    static _data = null;
+    static _data = {};
 
     static async getData(qual) {
-        let result = this.__data[qual];
+        let result = this._data[qual];
         if (!result) {
             result = await (await fetch('data/' + qual + '.json')).json();
-            this.__data[qual] = result;
+            this._data[qual] = result;
         }
         // TODO fazer uma checagem de "FK"s
         return result;
@@ -27,6 +26,19 @@ class Backend {
         return result;
     }
 
+    static async GET_Evento() {
+		const result = [];
+
+        const eventos = await this.getData('evento');
+
+        for (const idEvento of Object.keys(eventos)) {
+            const evento = eventos[idEvento];
+            evento.id = idEvento;
+            result.push(evento);
+        }
+        return result;
+    }
+
 	static async GET_Ministro() {
 		const result = [];
 
@@ -39,10 +51,4 @@ class Backend {
         }
         return result;
 	}
-
-/*
-    static getEventos() {
-        return this._data.eventos;
-    }
-*/
 }
