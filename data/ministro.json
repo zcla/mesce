@@ -152,7 +152,7 @@
 		"nomeGuerra": "Maria Helena",
 		"aniversario": "17/01",
 		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas" ]
+		"disponibilidade": [ ]
 	},
 	"Mariana": {
 		"nome": "Mariana Souza Furtado",

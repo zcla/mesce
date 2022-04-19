@@ -12,14 +12,14 @@
 			"evento": "Missa dom 12h00",
 			"ordem": 2,
 			"escalar": 2,
-			"escalados": [ "Bernardete", "Liliana", "Maria Helena" ]
+			"escalados": [ "Bernardete", "Liliana", "Martha Sally" ]
 		},
 		"Domingo 18h30": {
 			"nome": "Domingo 18h30",
 			"evento": "Missa dom 18h30",
 			"ordem": 3,
 			"escalar": 3,
-			"escalados": [ "Marta Marsiaj", "Martha Sally", "Solange" ]
+			"escalados": [ "Marta Marsiaj", "Solange" ]
 		},
 		"Domingo 20h00": {
 			"nome": "Domingo 20h00",
@@ -103,7 +103,7 @@
 			"evento": "Missa sáb 08h30",
 			"ordem": 15,
 			"escalar": 2,
-			"escalados": [ "Maria Helena", "Silvia" ]
+			"escalados": [ "Silvia" ]
 		},
 		"Sábado 18h30": {
 			"nome": "Sábado 18h30",
