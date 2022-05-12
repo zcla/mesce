@@ -130,12 +130,12 @@ class Menu {
 		GuiUtils.conteudoAdiciona(table);
 		
 		table.append($('<caption>')
-				.append($('<button type="button" class="btn btn-dark float-start" onclick="javascript:Menu.agenda(\'' + DateUtils.adicionaDias(dataAgenda, -1).getTime() + '\');">')
+				.append($('<button type="button" class="btn btn-dark float-start" onclick="javascript:Menu.agendaDia(\'' + DateUtils.adicionaDias(dataAgenda, -1).getTime() + '\');">')
 						.append("&#8592;"))
 				.append("&nbsp;")
 				.append(dataAgenda.getDate() + '/' + (dataAgenda.getMonth() + 1).toString().padStart(2, "0") + '/' + dataAgenda.getFullYear())
 				.append("&nbsp;")
-				.append($('<button type="button" class="btn btn-dark float-end" onclick="javascript:Menu.agenda(\'' + DateUtils.adicionaDias(dataAgenda, 1).getTime() + '\');">')
+				.append($('<button type="button" class="btn btn-dark float-end" onclick="javascript:Menu.agendaDia(\'' + DateUtils.adicionaDias(dataAgenda, 1).getTime() + '\');">')
 						.append("&#8594;")));
 		
 		const tbody = $('<tbody>');
