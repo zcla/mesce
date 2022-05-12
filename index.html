@@ -24,18 +24,34 @@
 		<script src="js/negocio/Ministro.js"></script>
 	</head>
 	<body>
-		<header class="p-3 bg-dark text-white">
-			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-				<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-					<h4>Mesce - Paróquia São Pedro de Alcântara</h4>
-				</a>
-				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-					<li><a class="nav-link px-2 text-white" href="javascript:Menu.agenda();">Agenda</a></li>
-					<li><a class="nav-link px-2 text-white" href="javascript:Menu.escala();">Escala</a></li>
-					<li><a class="nav-link px-2 text-white" href="javascript:Menu.ministrosLista();">Ministros</a></li>
-				</ul>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Mesce - Paróquia São Pedro de Alcântara</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="navbar-nav me-auto mb-2 mb-sm-0">
+					<li class="nav-item">
+						<a class="nav-link" href="javascript:Menu.agenda();">Agenda</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="javascript:Menu.escala();">Escala</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="javascript:Menu.ministrosLista();">Ministros</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Agenda</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown03">
+						<li><a class="dropdown-item" href="javascript:Menu.agendaDia();">Dia</a></li>
+						<li><a class="dropdown-item" href="javascript:Menu.agendaMes();">Mês</a></li>
+						</ul>
+					</li>
+					</ul>
+				</div>
 			</div>
-		</header>
+		</nav>
 		<div class="container-fluid">
 			<div id="mensagens">
 			</div>
