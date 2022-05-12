@@ -1,7 +1,11 @@
 "use strict";
 
 // Tenta resolver o problema do cache dos json => https://webplatform.github.io/docs/apis/appcache/ApplicationCache/swapCache/
-window.applicationCache.swapCache();
+try {
+	window.applicationCache.swapCache();
+} catch {
+	// só para evitar o erro
+}
 
 let data = null;
 
