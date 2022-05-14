@@ -30,6 +30,10 @@ table.agenda .agendaDia {
 	text-align: center;
 }
 
+table.agenda [onclick] {
+	cursor: pointer;
+}
+
 table.agenda .agendaConteudo {
 	margin-top: 4px;
 	min-height: 90px;

@@ -132,9 +132,12 @@ class Menu {
 		table.append($('<caption>')
 				.append($('<button type="button" class="btn btn-dark float-start" onclick="javascript:Menu.agendaDia(\'' + DateUtils.adicionaDias(dataAgenda, -1).getTime() + '\');">')
 						.append("&#8592;"))
-				.append("&nbsp;")
-				.append(dataAgenda.getDate() + '/' + (dataAgenda.getMonth() + 1).toString().padStart(2, "0") + '/' + dataAgenda.getFullYear())
-				.append("&nbsp;")
+				.append(dataAgenda.getDate().toString().padStart(2, "0"))
+				.append('/')
+				.append($('<span onclick="javascript:Menu.agendaMes(\'' + dataAgenda.getTime() + '\');">')
+						.append((dataAgenda.getMonth() + 1).toString().padStart(2, "0")))
+				.append('/')
+				.append(dataAgenda.getFullYear())
 				.append($('<button type="button" class="btn btn-dark float-end" onclick="javascript:Menu.agendaDia(\'' + DateUtils.adicionaDias(dataAgenda, 1).getTime() + '\');">')
 						.append("&#8594;")));
 		
@@ -253,7 +256,7 @@ class Menu {
 			
 			if (dataAtual.getMonth() == dataAgenda.getMonth()) {
 				td
-						.append($('<div class="agendaDia">')
+						.append($('<div class="agendaDia" onclick="javascript:Menu.agendaDia(\'' + dataAtual.getTime() + '\');">')
 								.append(dataAtual.getDate()))
 						.append($('<div class="agendaConteudo">'));
 
