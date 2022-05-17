@@ -35,7 +35,6 @@ class Evento {
 					result.push(new EventoInstancia({
 						data: new Date(dataAtual),
 						tipo: 'aniversario',
-						icone: "&#127874;",
 						nome: ministro.nomeGuerra
 					}));
 				}
@@ -106,8 +105,6 @@ class Evento {
 						}
 						break;
 					
-					// TODO testar quando houver
-					/*
 					// Únicos
 					case "unico":
 						if (DateUtils.mesmaData(dataAtual, DateUtils.stringToDate(evento.data))) {
@@ -121,8 +118,7 @@ class Evento {
 								escalados: evento.escalados
 							}));
 						}
-					break;
-					*/
+						break;
 
 					// Frequência desconhecida
 					default:
