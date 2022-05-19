@@ -187,6 +187,7 @@ table.ministros td.aniversario {
 }
 
 table.ministros td.disponibilidade_enfermos,
-table.ministros td.disponibilidade_missas {
+table.ministros td.disponibilidade_missas,
+table.ministros td.disponibilidade_arquidiocese {
 	text-align: center;
 }
