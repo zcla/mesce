@@ -1,5 +1,5 @@
-# https://github.com/scottbass/Powershell/blob/master/Scripts/Query-Access.ps1
-Function Query-Access() {
+# https://github.com/scottbass/Powershell/blob/master/Scripts/Read-MsAccessData.ps
+Function Read-MsAccessData() {
     param(
         [Parameter(
            Position=0,
@@ -43,7 +43,7 @@ Function Query-Access() {
 
 $jsonMinistro = [ordered]@{}
 
-$bdPessoa = Query-Access .\bd\Mesce.accdb "SELECT * FROM bd2json_ministro_pessoa"
+$bdPessoa = Read-MsAccessData .\bd\Mesce.accdb "SELECT * FROM bd2json_ministro_pessoa"
 
 ForEach ($pessoa In $bdPessoa) {
     $ministro = [ordered]@{
@@ -55,19 +55,19 @@ ForEach ($pessoa In $bdPessoa) {
     $jsonMinistro.($pessoa.id) = $ministro
 }
 
-$bdFuncao = Query-Access .\bd\Mesce.accdb "SELECT * FROM bd2json_ministro_funcao"
+$bdFuncao = Read-MsAccessData .\bd\Mesce.accdb "SELECT * FROM bd2json_ministro_funcao"
 
 ForEach ($funcao In $bdFuncao) {
     $jsonMinistro."$($funcao.id)".funcao = $funcao.funcao
 }
 
-$bdFuncao = Query-Access .\bd\Mesce.accdb "SELECT * FROM bd2json_ministro_funcao"
+$bdFuncao = Read-MsAccessData .\bd\Mesce.accdb "SELECT * FROM bd2json_ministro_funcao"
 
 ForEach ($funcao In $bdFuncao) {
     $jsonMinistro."$($funcao.id)".funcao = $funcao.funcao
 }
 
-$bdDisponibilidade = Query-Access .\bd\Mesce.accdb "SELECT * FROM bd2json_ministro_disponibilidade"
+$bdDisponibilidade = Read-MsAccessData .\bd\Mesce.accdb "SELECT * FROM bd2json_ministro_disponibilidade"
 
 ForEach ($disponibilidade In $bdDisponibilidade) {
     If (-not ($jsonMinistro."$($disponibilidade.id)".disponibilidade)) {
@@ -76,7 +76,7 @@ ForEach ($disponibilidade In $bdDisponibilidade) {
     $jsonMinistro."$($disponibilidade.id)".disponibilidade += $disponibilidade.disponibilidade
 }
 
-$bdAfastamento = Query-Access .\bd\Mesce.accdb "SELECT * FROM bd2json_ministro_afastamento"
+$bdAfastamento = Read-MsAccessData .\bd\Mesce.accdb "SELECT * FROM bd2json_ministro_afastamento"
 
 ForEach ($afastamento In $bdAfastamento) {
     If (-not ($jsonMinistro."$($afastamento.id)".afastamento)) {
