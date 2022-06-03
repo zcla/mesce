@@ -1,229 +1,343 @@
 {
-	"Adriana": {
-		"nome": "Adriana Porfírio de Aguiar",
-		"nomeGuerra": "Adriana",
-		"aniversario": "09/01",
-		"funcao": "Coordenadora",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Bernardete": {
-		"nome": "Maria Bernardete Briglia do Amaral",
-		"nomeGuerra": "Bernardete",
-		"aniversario": "02/02",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas" ]
-	},
-	"Carlos": {
-		"nome": "Carlos Alberto Ribeiro",
-		"nomeGuerra": "Carlos",
-		"aniversario": "06/05",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Cecília": {
-		"nome": "Maria Cecília Garcia Palma de Cintra",
-		"nomeGuerra": "Cecília",
-		"aniversario": "29/10",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Dorival": {
-		"nome": "Dorival Barboza Filho",
-		"nomeGuerra": "Dorival",
-		"aniversario": "22/11",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Eliane": {
-		"nome": "Eliane Maria Azevedo",
-		"nomeGuerra": "Eliane",
-		"aniversario": "20/02",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos" ],
-		"afastamento": [
-			{
-				"inicio": "30/03/2022",
-				"motivo": "saúde"
-			}
-		]
-	},
-	"Fátima": {
-		"nome": "Maria de Fátima da Silva Palmeira Ribeiro",
-		"nomeGuerra": "Fátima",
-		"aniversario": "30/07",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Hélio": {
-		"nome": "Hélio Puget Monteiro",
-		"nomeGuerra": "Hélio",
-		"aniversario": "09/07",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ],
-		"afastamento": [
-			{
-				"inicio": "03/06/2022",
-				"fim": "20/06/2022",
-				"motivo": "viagem"
-			}
-		]
-	},
-	"Hosana": {
-		"nome": "Hosana Maria Gonçalves Barboza",
-		"nomeGuerra": "Hosana",
-		"aniversario": "27/09",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Irmã Ana Lucia": {
-		"nome": "Ana Lucia Ferreira",
-		"nomeGuerra": "Irmã Ana Lucia",
-		"aniversario": "12/12",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Isabel": {
-		"nome": "Isabel Cristina Miranda Pinheiro",
-		"nomeGuerra": "Isabel",
-		"aniversario": "16/11",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Iza": {
-		"nome": "Iza Maria de Souza Oliveira",
-		"nomeGuerra": "Iza",
-		"aniversario": "12/11",
-		"comMandato": true,
-		"disponibilidade": [ ]
-	},
-	"Jean": {
-		"nome": "Jean Rodrigues Oliveira",
-		"nomeGuerra": "Jean",
-		"aniversario": "17/10",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"José Cláudio": {
-		"nome": "José Cláudio Conceição de Aguiar",
-		"nomeGuerra": "José Cláudio",
-		"aniversario": "05/10",
-		"funcao": "Coordenador",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"José Francisco": {
-		"nome": "José Francisco de Paula Freitas Portella",
-		"nomeGuerra": "José Francisco",
-		"aniversario": "03/11",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Ligia": {
-		"nome": "Ligia Cavalcante Ponte",
-		"nomeGuerra": "Ligia",
-		"aniversario": "10/02",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Liliana": {
-		"nome": "Liliana de Abreu Cunha Campos",
-		"nomeGuerra": "Liliana",
-		"aniversario": "02/08",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Luciano": {
-		"nome": "Luciano Gonçalves Borba Assunção",
-		"nomeGuerra": "Luciano",
-		"aniversario": "05/08",
-		"comMandato": true,
-		"disponibilidade": [ ]
-	},
-	"Mariana": {
-		"nome": "Mariana Souza Furtado",
-		"nomeGuerra": "Mariana",
-		"aniversario": "13/07",
-		"funcao": "Vice-coordenadora",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Marise": {
-		"nome": "Marise Gassenferth Veloso Lafetá",
-		"nomeGuerra": "Marise",
-		"aniversario": "30/07",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Marta Marsiaj": {
-		"nome": "Marta Elvira Pereira de Marsiaj",
-		"nomeGuerra": "Marta Marsiaj",
-		"aniversario": "17/05",
-		"funcao": "Secretária",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Martha Sally": {
-		"nome": "Martha Sally Blanco Joffily Bezerra",
-		"nomeGuerra": "Martha Sally",
-		"aniversario": "26/10",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Monica": {
-		"nome": "Monica Ferrari Villarino",
-		"nomeGuerra": "Monica",
-		"aniversario": "24/11",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Olímpia": {
-		"nome": "Olímpia Alves Pinheiro Tannure",
-		"nomeGuerra": "Olímpia",
-		"aniversario": "11/12",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Patricia": {
-		"nome": "Patricia Souza Furtado",
-		"nomeGuerra": "Patricia",
-		"aniversario": "16/09",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Rubélio": {
-		"nome": "José Rubélio de Oliveira Lima",
-		"nomeGuerra": "Rubélio",
-		"aniversario": "24/08",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Silvia": {
-		"nome": "Silvia Cavalcante Ponte",
-		"nomeGuerra": "Silvia",
-		"aniversario": "08/01",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Solange": {
-		"nome": "Solange Gadioli dos Santos Ferreira",
-		"nomeGuerra": "Solange",
-		"aniversario": "31/01",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ]
-	},
-	"Vânia": {
-		"nome": "Vânia Cavalcante Ponte",
-		"nomeGuerra": "Vânia",
-		"aniversario": "01/02",
-		"comMandato": true,
-		"disponibilidade": [ "enfermos", "missas", "arquidiocese" ],
-		"afastamento": [
-			{
-				"inicio": "03/06/2022",
-				"fim": "20/06/2022",
-				"motivo": "viagem"
-			}
-		]
-	}
+  "1": {
+    "nome": "Adriana Porfírio de Aguiar",
+    "nomeGuerra": "Adriana",
+    "aniversario": "09/01",
+    "comMandato": true,
+    "funcao": "Coordenadora",
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "2": {
+    "nome": "Maria Bernardete Briglia do Amaral",
+    "nomeGuerra": "Bernardete",
+    "aniversario": "02/02",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas"
+    ]
+  },
+  "3": {
+    "nome": "Carlos Alberto Ribeiro",
+    "nomeGuerra": "Carlos",
+    "aniversario": "06/05",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "4": {
+    "nome": "Maria Cecília Garcia Palma de Cintra",
+    "nomeGuerra": "Cecília",
+    "aniversario": "29/10",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "5": {
+    "nome": "Dorival Barboza Filho",
+    "nomeGuerra": "Dorival",
+    "aniversario": "22/11",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "6": {
+    "nome": "Eliane Maria Azevedo",
+    "nomeGuerra": "Eliane",
+    "aniversario": "20/02",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos"
+    ],
+    "afastamento": [
+      {
+        "motivo": "Saúde",
+        "inicio": "2022-03-30T00:00:00"
+      }
+    ]
+  },
+  "7": {
+    "nome": "Maria de Fátima da Silva Palmeira Ribeiro",
+    "nomeGuerra": "Fátima",
+    "aniversario": "30/07",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "8": {
+    "nome": "Hélio Puget Monteiro",
+    "nomeGuerra": "Hélio",
+    "aniversario": "09/07",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ],
+    "afastamento": [
+      {
+        "motivo": "Viagem",
+        "inicio": "2022-06-03T00:00:00",
+        "fim": "2022-06-20T00:00:00"
+      }
+    ]
+  },
+  "9": {
+    "nome": "Hosana Maria Gonçalves Barboza",
+    "nomeGuerra": "Hosana",
+    "aniversario": "27/09",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "10": {
+    "nome": "Ana Lucia Ferreira",
+    "nomeGuerra": "Irmã Ana Lucia",
+    "aniversario": "12/12",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "11": {
+    "nome": "Isabel Cristina Miranda Pinheiro",
+    "nomeGuerra": "Isabel",
+    "aniversario": "16/11",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "12": {
+    "nome": "Iza Maria de Souza Oliveira",
+    "nomeGuerra": "Iza",
+    "aniversario": "12/11",
+    "comMandato": true,
+    "afastamento": [
+      {
+        "motivo": "?",
+        "inicio": "2022-03-24T00:00:00"
+      }
+    ]
+  },
+  "13": {
+    "nome": "Jean Rodrigues Oliveira",
+    "nomeGuerra": "Jean",
+    "aniversario": "17/10",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "14": {
+    "nome": "José Cláudio Conceição de Aguiar",
+    "nomeGuerra": "José Cláudio",
+    "aniversario": "05/10",
+    "comMandato": true,
+    "funcao": "Coordenador",
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "15": {
+    "nome": "José Francisco de Paula Freitas Portella",
+    "nomeGuerra": "José Francisco",
+    "aniversario": "03/11",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "16": {
+    "nome": "Ligia Cavalcante Ponte",
+    "nomeGuerra": "Ligia",
+    "aniversario": "10/02",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "17": {
+    "nome": "Liliana de Abreu Cunha Campos",
+    "nomeGuerra": "Liliana",
+    "aniversario": "02/08",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "18": {
+    "nome": "Luciano Gonçalves Borba Assunção",
+    "nomeGuerra": "Luciano",
+    "aniversario": "05/08",
+    "comMandato": true,
+    "afastamento": [
+      {
+        "motivo": "Ocupado",
+        "inicio": "2022-03-24T00:00:00"
+      }
+    ]
+  },
+  "19": {
+    "nome": "Mariana Souza Furtado",
+    "nomeGuerra": "Mariana",
+    "aniversario": "13/07",
+    "comMandato": true,
+    "funcao": "Vice-coordenadora",
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "20": {
+    "nome": "Marise Gassenferth Veloso Lafetá",
+    "nomeGuerra": "Marise",
+    "aniversario": "30/07",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "21": {
+    "nome": "Marta Elvira Pereira de Marsiaj",
+    "nomeGuerra": "Marta Marsiaj",
+    "aniversario": "17/05",
+    "comMandato": true,
+    "funcao": "Secretária",
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "22": {
+    "nome": "Martha Sally Blanco Joffily Bezerra",
+    "nomeGuerra": "Martha Sally",
+    "aniversario": "26/10",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "23": {
+    "nome": "Monica Ferrari Villarino",
+    "nomeGuerra": "Monica",
+    "aniversario": "24/11",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "24": {
+    "nome": "Olímpia Alves Pinheiro Tannure",
+    "nomeGuerra": "Olímpia",
+    "aniversario": "11/12",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "25": {
+    "nome": "Patricia Souza Furtado",
+    "nomeGuerra": "Patricia",
+    "aniversario": "16/09",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "26": {
+    "nome": "José Rubélio de Oliveira Lima",
+    "nomeGuerra": "Rubélio",
+    "aniversario": "24/08",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "27": {
+    "nome": "Silvia Cavalcante Ponte",
+    "nomeGuerra": "Silvia",
+    "aniversario": "08/01",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas"
+    ]
+  },
+  "28": {
+    "nome": "Solange Gadioli dos Santos Ferreira",
+    "nomeGuerra": "Solange",
+    "aniversario": "31/01",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ]
+  },
+  "29": {
+    "nome": "Vânia Cavalcante Ponte",
+    "nomeGuerra": "Vânia",
+    "aniversario": "01/02",
+    "comMandato": true,
+    "disponibilidade": [
+      "enfermos",
+      "missas",
+      "arquidiocese"
+    ],
+    "afastamento": [
+      {
+        "motivo": "Viagem",
+        "inicio": "2022-06-03T00:00:00",
+        "fim": "2022-06-20T00:00:00"
+      }
+    ]
+  }
 }
