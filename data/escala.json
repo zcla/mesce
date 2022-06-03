@@ -112,5 +112,73 @@
 			"escalar": 2,
 			"escalados": [ "Carlos", "Fátima", "Hélio", "Rubélio", "Vânia" ]
 		}
+	},
+	"Extraordinária": {
+		"Paróquia": [
+			{
+				"Adriana": "14/05/2022 16h30 - casamento na igreja, com o Pe. Daniel",
+				"Irmã Ana Lucia": "21/05/2022 19h30 - missa de 7º dia na igreja, com o Pe. Carlos",
+				"Carlos": "27/05 19h30 19h30 - missa de 7º dia na igreja, com o Pe. Carlos",
+				"Dorival": "",
+				"Eliane": "Não pode servir",
+				"Hélio": "",
+				"Hosana": "",
+				"Isabel": "",
+				"Iza": "Não está servindo",
+				"Jean": "",
+				"José Cláudio": "",
+				"José Francisco": "",
+				"Rubélio": "",
+				"Ligia": "",
+				"Liliana": "",
+				"Luciano": "Não está servindo",
+				"Bernardete": "",
+				"Cecília": "",
+				"Fátima": "",
+				"Mariana": "",
+				"Marise": "",
+				"Marta Marsiaj": "",
+				"Martha Sally": "",
+				"Monica": "",
+				"Olímpia": "",
+				"Patricia": "",
+				"Silvia": "",
+				"Solange": "",
+				"Vânia": ""
+			}
+		],
+		"Arquidiocese": [
+			{
+				"Adriana": "04/06/2022 - Pentecostes",
+				"Irmã Ana Lucia": "",
+				"Carlos": "03/06/2022 - Pentecostes",
+				"Dorival": "",
+				"Eliane": "Não pode servir",
+				"Hélio": "",
+				"Hosana": "",
+				"Isabel": "",
+				"Iza": "Não está servindo",
+				"Jean": "05/06/2022 - Pentecostes",
+				"José Cláudio": "04/06/2022 - Pentecostes",
+				"José Francisco": "",
+				"Rubélio": "04/06/2022 - Pentecostes",
+				"Ligia": "",
+				"Liliana": "03/06/2022 - Pentecostes",
+				"Luciano": "Não está servindo",
+				"Bernardete": "",
+				"Cecília": "",
+				"Fátima": "",
+				"Mariana": "",
+				"Marise": "",
+				"Marta Marsiaj": "",
+				"Martha Sally": "",
+				"Monica": "03/06/2022 - Pentecostes",
+				"Olímpia": "",
+				"Patricia": "",
+				"Silvia": "",
+				"Solange": "",
+				"Vânia": ""
+			}
+		]
 	}
 }
