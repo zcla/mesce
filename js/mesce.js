@@ -264,11 +264,19 @@ class Menu {
 				nome.append($('<span class="badge float-end funcao">')
 						.append(ministro.funcao));
 			}
-			const disponibilidadeMissas = $('<span>').append(GuiUtils.simboloCondicao(ministro.disponibilidade.includes('missas')));
+			let disponibilidade_Enfermos = false;
+			let disponibilidade_Missas = false;
+			let disponibilidade_Arquidiocese = false;
+			if (ministro.disponibilidade) {
+				disponibilidade_Enfermos = ministro.disponibilidade.includes('enfermos');
+				disponibilidade_Missas = ministro.disponibilidade.includes('missas');
+				disponibilidade_Arquidiocese = ministro.disponibilidade.includes('arquidiocese');
+			}
+			const disponibilidadeMissas = $('<span>').append(GuiUtils.simboloCondicao(disponibilidade_Missas));
 			if (ministro.escaladoMissas) {
 				disponibilidadeMissas.append(' (' + ministro.escaladoMissas + ')')
 			}
-			const disponibilidadeArquidiocese = $('<span>').append(GuiUtils.simboloCondicao(ministro.disponibilidade.includes('arquidiocese')));
+			const disponibilidadeArquidiocese = $('<span>').append(GuiUtils.simboloCondicao(disponibilidade_Arquidiocese));
 
 			tbody
 					.append($('<tr>')
@@ -277,7 +285,7 @@ class Menu {
 							.append($('<td class="aniversario">')
 									.append(ministro.aniversario))
 							.append($('<td class="disponibilidade_enfermos">')
-									.append(GuiUtils.simboloCondicao(ministro.disponibilidade.includes('enfermos'))))
+									.append(GuiUtils.simboloCondicao(disponibilidade_Enfermos)))
 							.append($('<td class="disponibilidade_missas">')
 									.append(disponibilidadeMissas))
 							.append($('<td class="disponibilidade_arquidiocese">')

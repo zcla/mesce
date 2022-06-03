@@ -14,11 +14,13 @@ class Ministro {
 			const objMinistro = new Ministro(ministro)
 			result.ministros.push(objMinistro);
 			result.total++;
-			for (const disponibilidade of ministro.disponibilidade) {
-				if (!result.disponibilidade[disponibilidade]) {
-					result.disponibilidade[disponibilidade] = 0;
+			if (ministro.disponibilidade) {
+				for (const disponibilidade of ministro.disponibilidade) {
+					if (!result.disponibilidade[disponibilidade]) {
+						result.disponibilidade[disponibilidade] = 0;
+					}
+					result.disponibilidade[disponibilidade]++;
 				}
-				result.disponibilidade[disponibilidade]++;
 			}
 			objMinistro.escaladoMissas = 0;
 			for (const item of escala) {
@@ -31,6 +33,7 @@ class Ministro {
 	}
 
 	static ordenaPorNome(ministros) {
+		// TODO Está ordenando errado; a Hosana está vindo antes do Hélio.
 		return ministros.sort(function (a, b) {
 			if (a.nome > b.nome) {
 				return 1;
