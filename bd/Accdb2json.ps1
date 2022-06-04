@@ -93,3 +93,35 @@ ForEach ($afastamento In $bdAfastamento) {
 }
 
 $jsonMinistro | ConvertTo-Json -Depth 3 | Out-File .\data\ministro.json
+
+# -------------------------------------------------- evento.json
+
+$jsonEvento = [ordered]@{}
+
+$bdEvento = Read-MsAccessData .\bd\Mesce.accdb "SELECT * FROM bd2json_evento"
+
+ForEach ($evento In $bdEvento) {
+    $e = [ordered]@{
+        "nome" = $evento.nome
+        "tipo" = $evento.tipo
+        "frequencia" = $evento.frequencia
+        "hora" = $evento.hora
+    }
+    If ($evento.diaDaSemana.GetType().Name -ne "DBNull") {
+        $e.diaDaSemana = $evento.diaDaSemana
+    }
+    If ($evento.enesimo.GetType().Name -ne "DBNull") {
+        $e.enesimo = $evento.enesimo
+    }
+    If ($evento.diaDoMes.GetType().Name -ne "DBNull") {
+        $e.diaDoMes = $evento.diaDoMes
+    }
+    If ($evento.data.GetType().Name -ne "DBNull") {
+        $e.data = $evento.data.ToString('dd/MM/yyyy')
+    }
+    $jsonEvento."$($evento.id)" = $e
+}
+
+$jsonEvento | ConvertTo-Json -Depth 3 | Out-File .\data\evento.json
+
+# TODO fazer
