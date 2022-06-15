@@ -35,13 +35,7 @@ class Ministro {
 	static ordenaPorNome(ministros) {
 		// TODO Está ordenando errado; a Hosana está vindo antes do Hélio.
 		return ministros.sort(function (a, b) {
-			if (a.nome > b.nome) {
-				return 1;
-			}
-			if (a.nome < b.nome) {
-				return -1;
-			}
-			return 0;
+			return Intl.Collator().compare(a.nome, b.nome);
 		});
 	}
 
