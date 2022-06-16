@@ -242,8 +242,7 @@
     "funcao": "Secretária",
     "disponibilidade": [
       "enfermos",
-      "missas",
-      "arquidiocese"
+      "missas"
     ]
   },
   "22": {
@@ -318,8 +317,7 @@
     "comMandato": true,
     "disponibilidade": [
       "enfermos",
-      "missas",
-      "arquidiocese"
+      "missas"
     ]
   },
   "29": {
