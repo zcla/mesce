@@ -197,6 +197,13 @@
       "enfermos",
       "missas",
       "arquidiocese"
+    ],
+    "afastamento": [
+      {
+        "motivo": "Viagem",
+        "inicio": "2022-07-08T00:00:00",
+        "fim": "2022-07-31T00:00:00"
+      }
     ]
   },
   "18": {
