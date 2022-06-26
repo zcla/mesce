@@ -230,5 +230,12 @@
     "frequencia": "unico",
     "hora": "19h30",
     "data": "17/06/2022"
+  },
+  "34": {
+    "nome": "Missa de 7º dia",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "16h00",
+    "data": "25/06/2022"
   }
 }
