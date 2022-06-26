@@ -12,14 +12,14 @@
 			"evento": "Missa dom 12h00",
 			"ordem": 2,
 			"escalar": 2,
-			"escalados": [ "Bernardete", "Liliana", "Martha Sally" ]
+			"escalados": [ "Bernardete", "Liliana" ]
 		},
 		"Domingo 18h30": {
 			"nome": "Domingo 18h30",
 			"evento": "Missa dom 18h30",
 			"ordem": 3,
 			"escalar": 3,
-			"escalados": [ "Marta Marsiaj", "Solange" ]
+			"escalados": [ "Marta Marsiaj", "Martha Sally", "Solange" ]
 		},
 		"Domingo 20h00": {
 			"nome": "Domingo 20h00",
@@ -121,7 +121,7 @@
 				"Carlos": "27/05/2022 19h30 - missa de 7º dia na igreja, com o Pe. Carlos",
 				"Dorival": "17/06/2022 11h00 - missa de 7º dia na igreja, com o Pe. Carlos",
 				"Eliane": "Não pode servir",
-				"Hélio": "",
+				"Hélio": "25/06/2022 16h00 - missa de 7º dia, com o Pe. Carlos",
 				"Hosana": "",
 				"Isabel": "17/06/2022 19h30 - casamento na capela, com o Pe. Carlos",
 				"Iza": "Não está servindo",
