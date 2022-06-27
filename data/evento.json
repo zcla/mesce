@@ -237,5 +237,26 @@
     "frequencia": "unico",
     "hora": "16h00",
     "data": "25/06/2022"
+  },
+  "35": {
+    "nome": "Missa de Crisma",
+    "tipo": "missa",
+    "frequencia": "alteracao",
+    "hora": "18h30",
+    "data": "28/10/2022"
+  },
+  "36": {
+    "nome": "Missa de Crisma",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "20h00",
+    "data": "17/11/2022"
+  },
+  "37": {
+    "nome": "Missa de Crisma",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "20h00",
+    "data": "18/11/2022"
   }
 }
