@@ -258,5 +258,26 @@
     "frequencia": "unico",
     "hora": "20h00",
     "data": "18/11/2022"
+  },
+  "38": {
+    "nome": "Missa",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "11h00",
+    "data": "16/06/2022"
+  },
+  "39": {
+    "nome": "Missa",
+    "tipo": "missa",
+    "frequencia": "exclusao",
+    "hora": "18h30",
+    "data": "16/06/2022"
+  },
+  "40": {
+    "nome": "Adoração",
+    "tipo": "adoracao",
+    "frequencia": "exclusao",
+    "hora": "19h00",
+    "data": "16/06/2022"
   }
 }

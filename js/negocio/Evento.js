@@ -28,6 +28,8 @@ class Evento {
 		const ministros = Ministro.ordenaPorNome(await Backend.GET_Ministro());
 		
 		let dataAtual = new Date(dataInicial);
+		const alteracoes = [];
+		const exclusoes = [];
 		while (dataAtual <= dataFinal) {
 			// Aniversários
 			for (const ministro of ministros) {
@@ -120,6 +122,20 @@ class Evento {
 						}
 						break;
 
+					// Alterações em eventos periódicos
+					case "alteracao":
+						if (DateUtils.mesmaData(dataAtual, DateUtils.stringToDate(evento.data))) {
+							alteracoes.push(evento);
+						}
+						break;
+
+					// Exclusão de eventos periódicos
+					case "exclusao":
+						if (DateUtils.mesmaData(dataAtual, DateUtils.stringToDate(evento.data))) {
+							exclusoes.push(evento);
+						}
+						break;
+
 					// Frequência desconhecida
 					default:
 						throw "Frequência desconhecida: " + evento.frequencia;
@@ -127,6 +143,47 @@ class Evento {
 			}
 
 			dataAtual.setDate(dataAtual.getDate() + 1);
+		}
+
+		for (const alteracao of alteracoes) {
+			let encontrou = false;
+			for (const evento of result) {
+				if (evento.eventoPai) { // Só eventos recorrentes
+					if (DateUtils.mesmaData(evento.data, DateUtils.stringToDate(alteracao.data)) &&
+						evento.tipo == alteracao.tipo &&
+						evento.hora == alteracao.hora) {
+						evento.nome = alteracao.nome;
+						evento.escalar = alteracao.escalar;
+						evento.escalados = alteracao.escalados;
+						encontrou = true;
+					}
+				}
+			}
+			if (!encontrou) {
+				throw "Não encontrou?!";
+			}
+		}
+
+		for (const exclusao of exclusoes) {
+			let remover = -1;
+			for (const index in result) {
+				const evento = result[index];
+				if (evento.eventoPai) { // Só eventos recorrentes
+					if (DateUtils.mesmaData(evento.data, DateUtils.stringToDate(exclusao.data)) &&
+						evento.tipo == exclusao.tipo &&
+						evento.hora == exclusao.hora) {
+						if (remover > -1) {
+							throw "Encontrou mais de um?!";
+						}
+						remover = index;
+					}
+				}
+			}
+			if (remover == -1) {
+				throw "Não encontrou?!";
+			} else {
+				result.splice(remover, 1);
+			}
 		}
 
 		return result;
