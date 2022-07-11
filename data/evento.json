@@ -279,5 +279,12 @@
     "frequencia": "exclusao",
     "hora": "19h00",
     "data": "16/06/2022"
+  },
+  "41": {
+    "nome": "Missa de 7º dia",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "17h00",
+    "data": "04/07/2022"
   }
 }
