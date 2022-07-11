@@ -123,5 +123,3 @@ ForEach ($evento In $bdEvento) {
 }
 
 $jsonEvento | ConvertTo-Json -Depth 3 | Out-File ..\data\evento.json
-
-# TODO fazer
