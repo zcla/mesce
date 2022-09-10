@@ -33,7 +33,7 @@
 			"evento": "Missa seg 08h30",
 			"ordem": 5,
 			"escalar": 2,
-			"escalados": [ "Cecília", "Jean", "Monica" ]
+			"escalados": [ "Cecília", "Monica" ]
 		},
 		"Segunda 18h30": {
 			"nome": "Segunda 18h30",
