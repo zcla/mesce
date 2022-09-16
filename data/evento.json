@@ -328,5 +328,19 @@
     "frequencia": "unico",
     "hora": "11h00",
     "data": "10/09/2022"
+  },
+  "48": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "16h30",
+    "data": "17/09/2022"
+  },
+  "49": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "16h30",
+    "data": "18/09/2022"
   }
 }
