@@ -47,7 +47,7 @@
 			"evento": "Missa ter 08h30",
 			"ordem": 7,
 			"escalar": 2,
-			"escalados": [ "Ligia", "Silvia", "Vânia" ]
+			"escalados": [ "Silvia", "Vânia" ]
 		},
 		"Terça 18h30": {
 			"nome": "Terça 18h30",
@@ -75,7 +75,7 @@
 			"evento": "Missa qui 08h30",
 			"ordem": 11,
 			"escalar": 2,
-			"escalados": [ "Ligia", "Mariana" ]
+			"escalados": [ "Adriana", "José Cláudio", "Mariana" ]
 		},
 		"Quinta 18h30": {
 			"nome": "Quinta 18h30",

@@ -182,11 +182,7 @@
     "nomeGuerra": "Ligia",
     "aniversario": "10/02",
     "comMandato": true,
-    "disponibilidade": [
-      "enfermos",
-      "missas",
-      "arquidiocese"
-    ]
+    "disponibilidade": []
   },
   "17": {
     "nome": "Liliana de Abreu Cunha Campos",
