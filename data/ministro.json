@@ -242,7 +242,6 @@
     "nomeGuerra": "Marta Marsiaj",
     "aniversario": "17/05",
     "comMandato": true,
-    "funcao": "Secretária",
     "disponibilidade": [
       "enfermos",
       "missas"
@@ -286,6 +285,7 @@
     "nomeGuerra": "Patricia",
     "aniversario": "16/09",
     "comMandato": true,
+    "funcao": "Secretária",
     "disponibilidade": [
       "enfermos",
       "missas",
