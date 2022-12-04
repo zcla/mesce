@@ -342,5 +342,89 @@
     "frequencia": "unico",
     "hora": "16h30",
     "data": "18/09/2022"
+  },
+  "50": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "16h00",
+    "data": "24/09/2022"
+  },
+  "51": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "09h00",
+    "data": "25/09/2022"
+  },
+  "52": {
+    "nome": "Missa de 7º dia",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "19h30",
+    "data": "14/10/2022"
+  },
+  "53": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "15h00",
+    "data": "23/10/2022"
+  },
+  "54": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "20h00",
+    "data": "27/10/2022"
+  },
+  "55": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "16h00",
+    "data": "03/11/2022"
+  },
+  "56": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "11h00",
+    "data": "14/11/2022"
+  },
+  "57": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "19h30",
+    "data": "15/11/2022"
+  },
+  "58": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "16h30",
+    "data": "18/11/2022"
+  },
+  "59": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "16h00",
+    "data": "19/11/2022"
+  },
+  "60": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "19h00",
+    "data": "03/12/2022"
+  },
+  "61": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "16h30",
+    "data": "07/12/2022"
   }
 }

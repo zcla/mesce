@@ -92,7 +92,7 @@ ForEach ($afastamento In $bdAfastamento) {
     $jsonMinistro."$($afastamento.id)".afastamento += $a
 }
 
-$jsonMinistro | ConvertTo-Json -Depth 3 | Out-File ..\data\ministro.json
+$jsonMinistro | ConvertTo-Json -Depth 3 | Out-File .\data\ministro.json
 
 # -------------------------------------------------- evento.json
 
@@ -122,4 +122,4 @@ ForEach ($evento In $bdEvento) {
     $jsonEvento."$($evento.id)" = $e
 }
 
-$jsonEvento | ConvertTo-Json -Depth 3 | Out-File ..\data\evento.json
+$jsonEvento | ConvertTo-Json -Depth 3 | Out-File .\data\evento.json
