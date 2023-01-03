@@ -204,21 +204,21 @@
     "data": "14/05/2022"
   },
   "30": {
-    "nome": "Missa de 7º dia",
+    "nome": "Sétimo dia",
     "tipo": "missa",
     "frequencia": "unico",
     "hora": "19h30",
     "data": "21/05/2022"
   },
   "31": {
-    "nome": "Missa de 7º dia",
+    "nome": "Sétimo dia",
     "tipo": "missa",
     "frequencia": "unico",
     "hora": "19h30",
     "data": "27/05/2022"
   },
   "32": {
-    "nome": "Missa de 7º dia",
+    "nome": "Sétimo dia",
     "tipo": "missa",
     "frequencia": "unico",
     "hora": "11h00",
@@ -232,7 +232,7 @@
     "data": "17/06/2022"
   },
   "34": {
-    "nome": "Missa de 7º dia",
+    "nome": "Sétimo dia",
     "tipo": "missa",
     "frequencia": "unico",
     "hora": "16h00",
@@ -281,14 +281,14 @@
     "data": "16/06/2022"
   },
   "41": {
-    "nome": "Missa de 7º dia",
+    "nome": "Sétimo dia",
     "tipo": "missa",
     "frequencia": "unico",
     "hora": "17h00",
     "data": "04/07/2022"
   },
   "42": {
-    "nome": "Missa de 7º dia",
+    "nome": "Sétimo dia",
     "tipo": "missa",
     "frequencia": "unico",
     "hora": "19h30",
@@ -358,7 +358,7 @@
     "data": "25/09/2022"
   },
   "52": {
-    "nome": "Missa de 7º dia",
+    "nome": "Sétimo dia",
     "tipo": "missa",
     "frequencia": "unico",
     "hora": "19h30",
@@ -426,5 +426,19 @@
     "frequencia": "unico",
     "hora": "16h30",
     "data": "07/12/2022"
+  },
+  "62": {
+    "nome": "Sétimo dia",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "20h00",
+    "data": "08/12/2022"
+  },
+  "63": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "14h00",
+    "data": "08/01/2023"
   }
 }
