@@ -447,5 +447,12 @@
     "frequencia": "unico",
     "hora": "10h00",
     "data": "12/01/2023"
+  },
+  "65": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "20h00",
+    "data": "21/01/2023"
   }
 }
