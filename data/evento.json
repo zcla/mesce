@@ -440,5 +440,12 @@
     "frequencia": "unico",
     "hora": "14h00",
     "data": "08/01/2023"
+  },
+  "64": {
+    "nome": "Profissão religiosa",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "10h00",
+    "data": "12/01/2023"
   }
 }
