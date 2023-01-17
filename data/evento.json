@@ -454,5 +454,19 @@
     "frequencia": "unico",
     "hora": "20h00",
     "data": "21/01/2023"
+  },
+  "66": {
+    "nome": "Sétimo dia",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "19h30",
+    "data": "18/01/2023"
+  },
+  "67": {
+    "nome": "Casamento",
+    "tipo": "missa",
+    "frequencia": "unico",
+    "hora": "20h00",
+    "data": "28/01/2023"
   }
 }
