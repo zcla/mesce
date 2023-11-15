@@ -295,7 +295,7 @@ class Menu {
 		table.append(tbody);
 	}
 
-	static async compromissos(dias) {
+	static async verificacao(dias) {
 		if ((!dias) || (dias < 1)) {
 			dias = 14;
 		}
@@ -317,9 +317,8 @@ class Menu {
 		table.append(thead);
 
 		const tbody = $('<tbody>');
-		const dataAtual = new Date((new Date()).toDateString());
-		const dataFinal = new Date(dataAtual);
-		dataFinal.setDate(dataFinal.getDate() + dias - 1);
+
+		const eventos = await Evento.verifica(dias);
 /*
 		const eventos = Evento.ordenaCronologicamente(await Evento.instanciaEventosNaEscalaDoPeriodo(dataAtual, dataFinal));
 
@@ -414,5 +413,5 @@ class Menu {
 }
 
 $(document).ready(async function() {
-	Menu.ministrosLista();
+	Menu.verificacao();
 });

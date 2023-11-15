@@ -2,8 +2,7 @@
 
 class Evento {
 	static async agendaMes(data) {
-		const result = {
-		};
+		const result = {};
 
 		result.inicioMes = new Date(data.toDateString());
 		result.inicioMes.setDate(1);
@@ -217,6 +216,18 @@ class Evento {
 			}
 			return 0;
 		});
+	}
+
+	static async verifica(dias) {
+		const result = [];
+
+		const dataAtual = new Date((new Date()).toDateString());
+		const dataFinal = new Date(dataAtual);
+		dataFinal.setDate(dataFinal.getDate() + dias - 1);
+
+		// TODO Continuar...
+
+		return result;
 	}
 
 	constructor(id, obj) {
